@@ -21,9 +21,17 @@
     box-sizing: border-box;
   }
   body {
-    margin: 0; font-family: 'Poppins', sans-serif; background: #fff; color: #000;
-    scroll-behavior: smooth;
+    margin: 0; 
+    font-family: 'Poppins', sans-serif; 
+    color: #000;
+    scroll-behavior: smooth; 
+    min-height: 100%;
+    background-image: url('background-image2.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
+  
   a {
     color: inherit; text-decoration: none;
   }
@@ -37,16 +45,22 @@
     font-weight: 700;
   }
   /* Container */
-  /*.container {
+  .container {
     max-width: 1200px; margin: 0 auto; padding: 0 1rem;
   }
   /* Header */
   header {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-    background: transparent; align-items: center;
-    padding: 1rem 0; font-weight: 500; letter-spacing: 0.05em;
+    top: 0; left: 0; 
+    right: 0; 
+    z-index: 1000;
+    background: transparent; 
+    align-items: center;
+    padding: 1rem 0; 
+    font-weight: 500; 
+    letter-spacing: 0.05em;
   }
   .site-header{
+    position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -54,6 +68,7 @@
     background-color: transparent;
     color: white;
     padding: 1rem;
+    z-index: 1;
   }
   
   .main-nav{
@@ -68,8 +83,6 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin: 10px;
     z-index: 1000;
     background-color: black;
   }
@@ -94,22 +107,28 @@
     cursor: pointer;
   }
   nav a {
-    color: #fff; opacity: 0.8; transition: opacity 0.3s ease;
+    color: #fff; 
+    opacity: 0.8; 
+    transition: opacity 0.3s ease;
   }
   nav a:hover, nav a[aria-current="page"] {
     opacity: 1;
   }
   .logo {
-    position: relative; left: 50%; transform: translateX(-50%);
-    height: 40px; align-items: center; 
+    position: relative; 
+    height: 10px;
+    align-items: center; 
   }
   /* Social icons container */
   .social-icons {
-    top: 1rem; left: 1rem; display: flex; gap: 0.75rem;
-    z-index: 1100; padding: 1.8rem;
+    display: flex; 
+    gap: 0.75rem;
+    z-index: 1100;
   }
   .social-icons a {
-    display: inline-flex; width: 30px; height: 30px; fill: #fff; opacity: 0.8;
+    width: 4rem; 
+    height: 4rem; 
+    fill: #fff; 
     transition: opacity 0.3s ease;
   }
   .social-icons a:hover {
@@ -117,22 +136,47 @@
   }
   /* Hero Section */
   .hero {
-    position: relative; height: 100vh; min-height: 600px;
-    background: url('https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/49d3487e-1f70-45c0-a44e-501926175275/Umbrella+for+uploads.jpg') center/cover no-repeat;
-    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    position: relative; 
+    height: 100vh;
+    background: url('backup-background.jpg') center/cover no-repeat;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
     gap: 1.5rem;
     padding: 0 1rem;
   }
   .hero video {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    z-index: 0;
   }
   .hero-buttons {
-    position: relative; z-index: 1; display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;
+    position: relative; 
+    z-index: 1; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1.5rem; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    padding-top: 40vh;
   }
   .btn-primary {
-    background-color: #b94f4a; color: #fff; border: none; border-radius: 9999px;
-    padding: 0.75rem 2.5rem; font-weight: 700; font-size: 1rem; cursor: pointer;
-    text-transform: uppercase; letter-spacing: 0.1em;
+    background-color: #65c4ff; 
+    color: #fff; 
+    border: none; 
+    border-radius: 9999px;
+    padding: 0.75rem 2.5rem; 
+    font-weight: 700; 
+    font-size: 1rem; 
+    cursor: pointer;
+    text-transform: uppercase; 
+    letter-spacing: 0.1em;
     transition: background-color 0.3s ease;
   }
   .btn-primary:hover {
@@ -140,10 +184,12 @@
 }
   /* Upcoming Shows Section */
   .shows-section {
-    background: #b98c8f;
+    background: transparent;
     padding: 3rem 1rem 4rem;
     text-align: center;
     color: #fff;
+    position: relative;
+    z-index: 1;
   }
   .shows-images {
     display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin: 2rem 0 1.5rem;
@@ -162,7 +208,7 @@
   }
   /* Merch Section */
   .merch-section {
-    background: #6a5a5a;
+    background: transparent;
     padding: 3rem 1rem 4rem;
     color: #fff;
     text-align: center;
@@ -190,7 +236,7 @@
   /* Sweater Sessions Section */
   .sweater-section {
     position: relative;
-    background: url('https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/dc315816-0c7f-4c4a-be1f-1442ef447b8c/4x5+press.jpg') center/cover no-repeat;
+    background: transparent;
     padding: 6rem 1rem 6rem;
     color: #fff;
     text-align: center;
@@ -203,6 +249,31 @@
   }
   .sweater-section > * {
     position: relative; z-index: 1;
+  }
+  .video-thumbnails{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    align-items: center;
+  }
+  .video-thumbnails a {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    transition: transform 0.3s ease;
+  }
+  .video-thumbnails img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .video-thumbnails a:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
   }
   /* Listen Button */
   .listen-btn {
@@ -243,6 +314,7 @@
   }
   /* Responsive */
   @media (min-width: 767px) {
+    
     .site-header {
       flex-direction: row;
       justify-content: space-between;
@@ -260,20 +332,53 @@
       display: none;
     }
     .logo {
-      position: static; transform: none; margin: 0 auto 1rem;
-      height: 36px;
+      position: static; 
+      transform: none; 
+      margin: 0 auto 1rem;
+      height: 10px;
     }
     .social-icons {
-      position: fixed; top: 1rem; right: 1rem; display: flex; gap: 0.75rem;
+      position: relative; 
+      top: 1rem; 
+      right: 1rem; 
+      display: flex; 
+      gap: 0.75rem;
       z-index: 1100;
+    }
+    .hero {
+      position: relative;
+      height: 65vh; /* or 500px — change as needed */
+      overflow: hidden;
+    }
+
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
     }
     .hero-buttons {
       flex-direction: row;
       gap: 1rem;
+      align-items: flex-start;
     }
     .shows-images {
       flex-direction: row;
       gap: 1rem;
+    }
+    .sweater-section {
+      padding: 4rem 1rem 4rem;
+    }
+    .video-thumbnails{
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .video-thumbnails a {
+      flex: 1 1 240px;
     }
     .merch-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -281,9 +386,6 @@
     }
     .merch-item {
       max-width: 140px;
-    }
-    .sweater-section {
-      padding: 4rem 1rem 4rem;
     }
   }
 </style>
@@ -304,9 +406,10 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
+
   <a href="/" class="logo" aria-label="MMIH Home">
-      <h1>My Mom is Here</h1>
-  </a>
+      <img src="">
+     </a>
 
   <div class="social-icons" aria-label="Social media links">
     <a href="https://open.spotify.com/track/70al7FyjDdYLd1ysSJ9b73?si=268c569814114fc5" target="_blank" rel="noopener" aria-label="Spotify">
@@ -335,6 +438,7 @@
     <video autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;">
       <source src="loop-video.mp4" type="video/mp4" />
     </video>
+    
     <div class="hero-buttons">
       <a href="tour.html" class="btn-primary" role="button">SHOWS</a>
       <a href="music.html" class="btn-primary" role="button">MUSIC</a>
@@ -342,21 +446,30 @@
     </div>
   </section>
 
+  <div class="background"></div>
   <section class="shows-section" aria-labelledby="upcoming-shows-title">
     <h2 id="upcoming-shows-title">UPCOMING SHOWS</h2>
     <div class="shows-images">
       <a href="/tickets" aria-label="View all upcoming show tickets">
-        <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/0ab9f93b-4050-4521-b084-216cdaf92647/all+date_4x5.jpg" alt="Upcoming shows poster" loading="lazy" decoding="async" />
-      </a>
-      <a href="/tour" aria-label="View tour details">
-        <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/5647d8de-4973-4435-8b05-014d22f3bfb9/Spring_Summer+26.jpg" alt="Tour poster" loading="lazy" decoding="async" />
+        <img src="tour-poster.jpg" alt="Upcoming shows poster"/>
       </a>
     </div>
     <a href="/tour" class="btn-primary tickets-btn" role="button">TICKETS</a>
   </section>
 
   <section class="sweater-section" aria-labelledby="sweater-sessions-title">
-    <h2 id="sweater-sessions-title">THE SWEATER SESSIONS II</h2>
+    <h2 id="sweater-sessions-title">MUSIC VIDEOS</h2>
+    <div class="video-thumbnails">
+    <a href="https://www.youtube.com/watch?v=UWZgF8JRni4&list=RDUWZgF8JRni4&start_radio=1" target="_blank">
+      <img src="https://img.youtube.com/vi/UWZgF8JRni4/hqdefault.jpg" alt="Watch on YouTube">
+    </a>
+    <a href="https://www.youtube.com/watch?v=l_4Wr4e9Tts" target="_blank">
+      <img src="https://img.youtube.com/vi/l_4Wr4e9Tts/hqdefault.jpg" alt="Watch on YouTube">
+    </a>
+    <a href="https://www.youtube.com/watch?v=fenM8Hr4OIM" target="_blank">
+      <img src="https://img.youtube.com/vi/fenM8Hr4OIM/hqdefault.jpg" alt="Watch on YouTube">
+    </a>
+    </div>
     <a href="https://stem.ffm.to/thesweatersessionsii" class="btn-primary listen-btn" role="button" target="_blank" rel="noopener">LISTEN</a>
   </section>
 
