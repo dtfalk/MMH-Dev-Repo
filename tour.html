@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TOUR — Couch</title>
+<meta name="description" content="Couch (The Band) on Tour! Upcoming Shows. Sunshower Tour." />
+<meta property="og:title" content="TOUR — Couch" />
+<meta property="og:description" content="Couch (The Band) on Tour! Upcoming Shows. Sunshower Tour." />
+<meta property="og:image" content="http://static1.squarespace.com/static/63cb777a28ce4e12435b075a/t/68051ae77869c808d4715371/1752821307082/Untitled+design+%2837%29.png?format=1500w" />
+<meta property="og:url" content="https://www.couchtheband.com/tour" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="TOUR — Couch" />
+<meta name="twitter:description" content="Couch (The Band) on Tour! Upcoming Shows. Sunshower Tour." />
+<meta name="twitter:image" content="http://static1.squarespace.com/static/63cb777a28ce4e12435b075a/t/68051ae77869c808d4715371/1752821307082/Untitled+design+%2837%29.png?format=1500w" />
+<link rel="icon" href="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/dc761829-6334-4e5b-a982-2f090b44ec28/favicon.ico?format=100w" type="image/x-icon" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700" rel="stylesheet" />
+<style>
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0; font-family: 'Poppins', sans-serif; background: #000; color: #fff; line-height: 1.4;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    color: inherit; text-decoration: none;
+  }
+  a:focus-visible {
+    outline: 2px solid #c1aaff; outline-offset: 2px;
+  }
+  img {
+    max-width: 100%; height: auto; display: block;
+  }
+  h2 {
+    font-weight: 700; margin: 0 0 1rem; text-align: center; text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  strong {
+    font-weight: 700;
+  }
+  /* Container */
+  .container {
+    max-width: 1200px; margin: 0 auto; padding: 0 1rem;
+  }
+  /* Header */
+  header {
+    position: fixed; top: 0; left: 0; right: 0; background: transparent; z-index: 1000;
+    display: flex; justify-content: space-between; align-items: center; padding: 1rem 1rem 0.5rem;
+    font-size: 0.9rem;
+  }
+  nav {
+    display: flex; gap: 1.5rem;
+  }
+  nav a {
+    color: #fff; font-weight: 500; padding: 0.25rem 0;
+    position: relative;
+  }
+  nav a[aria-current="page"]::after {
+    content: ""; position: absolute; bottom: -4px; left: 0; right: 0; height: 2px; background: #fff; border-radius: 1px;
+  }
+  .logo img {
+    height: 40px; width: auto;
+  }
+  /* Social icons container */
+  .social-icons {
+    display: flex; gap: 1rem; align-items: center;
+  }
+  .social-icons a svg {
+    width: 20px; height: 20px; fill: #fff; transition: fill 0.3s ease;
+  }
+  .social-icons a:hover svg,
+  .social-icons a:focus-visible svg {
+    fill: #c1aaff;
+  }
+  /* Main sections */
+  main {
+    padding-top: 80px;
+  }
+  section {
+    padding: 4rem 1rem 3rem;
+  }
+  /* Upcoming Shows Section */
+  .upcoming-shows {
+    background: rgba(0,0,0,0.75);
+    max-width: 900px;
+    margin: 0 auto 4rem;
+    padding: 2rem 2rem 3rem;
+    border-radius: 4px;
+  }
+  .upcoming-shows h2 {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+  .shows-list {
+    list-style: none;
+    margin: 0; padding: 0;
+  }
+  .show-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto auto;
+    gap: 1rem 1.5rem;
+    align-items: center;
+    border-bottom: 1px solid rgba(255 255 255 / 0.15);
+    padding: 1rem 0;
+  }
+  .show-item:last-child {
+    border-bottom: none;
+  }
+  .show-date {
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+  }
+  .show-venue {
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  .show-location {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  .btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    border: 1.5px solid #fff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+  }
+  .btn:hover,
+  .btn:focus-visible {
+    background-color: #c1aaff;
+    border-color: #c1aaff;
+    color: #000;
+    outline: none;
+  }
+  .btn.vip {
+    margin-right: 0.5rem;
+  }
+  /* Powered by seated */
+  .powered-by {
+    text-align: right;
+    font-size: 0.8rem;
+    color: #ccc;
+    margin-top: 0.5rem;
+    font-family: Arial, sans-serif;
+  }
+  .powered-by a {
+    color: #fff;
+    font-weight: 700;
+  }
+  .powered-by a:hover,
+  .powered-by a:focus-visible {
+    color: #c1aaff;
+    outline: none;
+  }
+  /* Past Shows Section */
+  .past-shows {
+    background: #222;
+    color: #c94a4a;
+    max-width: 900px;
+    margin: 0 auto 4rem;
+    padding: 2rem 2rem 3rem;
+    border-radius: 4px;
+  }
+  .past-shows h2 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #c94a4a;
+    padding-bottom: 0.5rem;
+  }
+  details {
+    border-top: 1px solid #c94a4a;
+    padding: 0.75rem 0;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #c94a4a;
+  }
+  details summary {
+    list-style: none;
+    outline: none;
+  }
+  details[open] summary::after {
+    content: "▲";
+    float: right;
+  }
+  details summary::after {
+    content: "▼";
+    float: right;
+  }
+  details p {
+    margin: 0.5rem 0 0 1rem;
+    font-weight: 400;
+    color: #eee;
+    white-space: pre-wrap;
+  }
+  /* Footer */
+  footer {
+    background: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #c94a4a;
+    font-weight: 600;
+  }
+  footer a {
+    color: #c94a4a;
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  footer a svg {
+    width: 20px; height: 20px; fill: #c94a4a;
+    vertical-align: middle;
+    transition: fill 0.3s ease;
+  }
+  footer a:hover svg,
+  footer a:focus-visible svg {
+    fill: #000;
+    outline: none;
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    .show-item {
+      grid-template-columns: 1fr;
+      gap: 0.25rem 0;
+      text-align: center;
+    }
+    .show-location {
+      margin-bottom: 0.5rem;
+    }
+    .btn.vip {
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+    }
+    .btn {
+      width: 100%;
+    }
+    nav {
+      display: none;
+    }
+    header {
+      justify-content: center;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav aria-label="Primary navigation">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/tour" aria-current="page">Tour</a>
+    <a href="/music">Music</a>
+    <a href="/videos">Videos</a>
+    <a href="https://couchtheband.myshopify.com" target="_blank" rel="noopener noreferrer">Merch</a>
+    <a href="/contact">Contact</a>
+  </nav>
+  <a href="/" class="logo" aria-label="Couch homepage">
+    <img src="//images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/86b34548-72f2-4a67-aae6-66ccc494b4e2/PNG_white_COUCH+1.png?format=1500w" alt="Couch logo" loading="eager" decoding="async" />
+  </a>
+  <div class="social-icons" aria-label="Social media links">
+    <a href="https://open.spotify.com/artist/3nYyLjhw4mYzYfJePsCJYJ?si=hGlKsNmlQMKOBAqMr3NdQQ&amp;nd=1" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#spotify-unauth-icon"></use></svg>
+    </a>
+    <a href="https://music.apple.com/ca/artist/couch/1455880800" target="_blank" rel="noopener noreferrer" aria-label="iTunes Store">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#itunes-icon"></use></svg>
+    </a>
+    <a href="https://www.youtube.com/channel/UCYOcJ00IMsyv_h9SFtA9EJg" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#youtube-unauth-icon"></use></svg>
+    </a>
+    <a href="https://www.instagram.com/couch.theband/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#instagram-unauth-icon"></use></svg>
+    </a>
+    <a href="https://www.tiktok.com/@couch.theband?language=en" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#tiktok-unauth-icon"></use></svg>
+    </a>
+    <a href="https://www.facebook.com/couchtheband/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#facebook-unauth-icon"></use></svg>
+    </a>
+  </div>
+</header>
+<main>
+  <section class="upcoming-shows" aria-labelledby="upcoming-shows-title">
+    <h2 id="upcoming-shows-title">Upcoming Shows</h2>
+    <ul class="shows-list">
+      <li class="show-item">
+        <div class="show-date">JUL 31, 2025</div>
+        <div class="show-venue">Sierra Nevada Brewing Co.</div>
+        <div class="show-location">Mills River, NC</div>
+        <div>
+          <a href="https://link.seated.com/af093401-7aa7-46bf-92fd-a918b252ae8b" target="_blank" rel="noopener noreferrer" class="btn">Tickets</a>
+        </div>
+      </li>
+      <li class="show-item">
+        <div class="show-date">SEP 13, 2025 – SEP 14, 2025</div>
+        <div class="show-venue">Whale Rock Music &amp; Arts Festival</div>
+        <div class="show-location">Paso Robles, CA</div>
+        <div>
+          <a href="https://link.seated.com/0f0b9acd-5ad3-4cb9-afbb-054aae9d24d9" target="_blank" rel="noopener noreferrer" class="btn">Tickets</a>
+        </div>
+      </li>
+      <li class="show-item">
+        <div class="show-date">NOV 7, 2025</div>
+        <div class="show-venue">Ramova Theatre</div>
+        <div class="show-location">Chicago, IL</div>
+        <div>
+          <a href="https://link.seated.com/75a991c0-dc4a-4718-8db2-2cd775723195/2" target="_blank" rel="noopener noreferrer" class="btn vip">VIP</a>
+          <a href="https://link.seated.com/75a991c0-dc4a-4718-8db2-2cd775723195" target="_blank" rel="noopener noreferrer" class="btn">Tickets</a>
+        </div>
+      </li>
+      <li class="show-item">
+        <div class="show-date">NOV 9, 2025</div>
+        <div class="show-venue">First Avenue</div>
+        <div class="show-location">Minneapolis, MN</div>
+        <div>
+          <a href="https://link.seated.com/429ea02a-84bf-4899-bb2c-3341b093f2d8/2" target="_blank" rel="noopener noreferrer" class="btn vip">VIP</a>
+          <a href="https://link.seated.com/429ea02a-84bf-4899-bb2c-3341b093f2d8" target="_blank" rel="noopener noreferrer" class="btn">Tickets</a>
+        </div>
+      </li>
+      <li class="show-item">
+        <div class="show-date">NOV 13, 2025</div>
+        <div class="show-venue">Brooklyn Steel</div>
+        <div class="show-location">Brooklyn, NY</div>
+        <div>
+          <a href="https://link.seated.com/0f1a3ee2-4dd2-4f81-9527-12c401c5e0cf/2" target="_blank" rel="noopener noreferrer" class="btn vip">VIP</a>
+          <a href="https://link.seated.com/0f1a3ee2-4dd2-4f81-9527-12c401c5e0cf" target="_blank" rel="noopener noreferrer" class="btn">Tickets</a>
+        </div>
+      </li>
+      <li class="show-item">
+        <div class="show-date">NOV 15, 2025</div>
+        <div class="show-venue">9:30 Club</div>
+        <div class="show-location">Washington, D.C.</div>
+        <div>
+          <a href="https://link.seated.com/52a09801-3327-4951-a7c4-9428e234d63a/2" target="_blank" rel="noopener noreferrer" class="btn vip">VIP</a>
+          <a href="https://link.seated.com/52a09801-3327-4951-a7c4-9428e234d63a" target="_blank" rel="noopener noreferrer" class="btn">Tickets</a>
+        </div>
+      </li>
+      <li class="show-item">
+        <div class="show-date">NOV 21, 2025</div>
+        <div class="show-venue">Union Transfer</div>
+        <div class="show-location">Philadelphia, PA</div>
+        <div>
+          <a href="https://link.seated.com/e2b5bdbc-1a71-4596-9ad4-7152ba89a440/2" target="_blank" rel="noopener noreferrer" class="btn vip">VIP</a>
+          <a href="https://link.seated.com/e2b5bdbc-1a71-4596-9ad4-7152ba89a440" target="_blank" rel="noopener noreferrer" class="btn">Tickets</a>
+        </div>
+      </li>
+      <li class="show-item">
+        <div class="show-date">NOV 22, 2025</div>
+        <div class="show-venue">Roadrunner</div>
+        <div class="show-location">Boston, MA</div>
+        <div>
+          <a href="https://link.seated.com/c3421c8c-dde6-4b43-badd-4094caac9789/2" target="_blank" rel="noopener noreferrer" class="btn vip">VIP</a>
+          <a href="https://link.seated.com/c3421c8c-dde6-4b43-badd-4094caac9789" target="_blank" rel="noopener noreferrer" class="btn">Tickets</a>
+        </div>
+      </li>
+    </ul>
+    <div class="powered-by">powered by <a href="https://www.seated.com" target="_blank" rel="noopener noreferrer">seated</a></div>
+  </section>
+  <section class="past-shows" aria-labelledby="past-shows-title">
+    <h2 id="past-shows-title">Past Shows</h2>
+    <details>
+      <summary>2025</summary>
+      <p>7.12.25 | MAPLEWOOD, NJ | MAPLEWOODSTOCK</p>
+      <p>7.9.25 | PORTSMOUTH, NH | PROSPECT PARK CONCERT SERIES</p>
+      <p>6.29.25 | CAPE COD, MA | PAYOMET PAC</p>
+      <p>6.28.25 | NORWICH, CT | ROSE ARTS FEST</p>
+      <p>6.27.25 | HAMMONTON, NJ | BEARD FEST</p>
+      <p>6.24.25 | FLAGSTAFF, AZ | PEPSI AMP</p>
+      <p>6.22.25 | SANTA FE, NM | TUMBLEROOT, BREWING</p>
+      <p>6.21.25 | SANDY, UT | SANDY AMP (SUPPORTING LAKE STREET DIVE)</p>
+      <p>6.19.25 | WINTER PARK, CO | WINTER PARK</p>
+      <p>6.18.25 | AVON, CO | AVON LIVE!</p>
+      <p>6.11.25 | LONDONDERRY, NH | CONCERTS ON THE COMMON</p>
+      <p>5.17.25 | ANNAPOLIS, MD | RAM’S HEAD</p>
+      <p>5.16.25 | BETHLEHEM, PA | STEEL STACKS</p>
+      <p>4.26.25 | LOWELL, MA | THE TOWN AND CITY FESTIVAL</p>
+      <p>2.20.25 | LONDON, UK | O2 KENTISH TOWN FORUM (SUPPORTING CORY WONG)</p>
+      <p>2.19.25 | LONDON, UK | O2 KENTISH TOWN FORUM (SUPPORTING CORY WONG)</p>
+      <p>2.17.25 | GLASGOW, UK | BARROWLAND BALLROOM (SUPPORTING CORY WONG)</p>
+      <p>2.15.25 | MANCHESTER, UK | MANCHESTER ACADEMY 1 (SUPPORTING CORY WONG)</p>
+      <p>2.14.25 | BRISTOL, UK | O2 ACADEMY BRISTOL (SUPPORTING CORY WONG)</p>
+      <p>2.12.25 | PARIS, FR | L’OLYMPIA (SUPPORTING CORY WONG)</p>
+      <p>2.11.25 | PARIS, FR | L’OLYMPIA (SUPPORTING CORY WONG)</p>
+      <p>2.10.25 | ANTWERP, BE | DE ROMA (SUPPORTING CORY WONG)</p>
+      <p>2.8.25 | AMSTERDAM, NL | AFAS LIVE (SUPPORTING CORY WONG)</p>
+      <p>2.6.25 | LUXEMBOURG, LU | ROCK HAL (SUPPORTING CORY WONG)</p>
+      <p>2.4.25 | BRUSSELS, BE | ANCIENE BELGIQUE (SUPPORTING CORY WONG)</p>
+      <p>2.3.25 | ZURICH, SW | VOLKSHAUS (SUPPORTING CORY WONG)</p>
+      <p>2.2.25 | MUNICH, DE | MUFFATHALLE (SUPPORTING CORY WONG)</p>
+      <p>2.1.25 | HAMBURG, DE | GROSSE FREIHEIT (SUPPORTING CORY WONG)</p>
+      <p>1.31.25 | BERLIN, DE | COLUMBIAHALLE (SUPPORTING CORY WONG)</p>
+      <p>1.30.25 | COPENHAGEN, CH | POOLEN (SUPPORTING CORY WONG)</p>
+      <p>1.11.25 | BROOKLYN, NY | WINTER JAZZ FEST</p>
+    </details>
+    <details>
+      <summary>2024</summary>
+      <p>11.24.24 | ST. PAUL, MN | PALACE THEATRE (SUPPORTING CORY WONG)</p>
+      <p>11.23.24 | ST. PAUL, MN | PALACE THEATRE (SUPPORTING CORY WONG)</p>
+      <p>11.22.24 | CHICAGO, IL | SALT SHED (SUPPORTING CORY WONG)</p>
+      <p>11.21.24 | MADISON, WI | THE SYLVEE (SUPPORTING CORY WONG)</p>
+      <p>11.20.24 | INDIANAPOLIS, IN | EGYPTIAN ROOM (SUPPORTING CORY WONG)</p>
+      <p>11.17.24 | COLUMBUS, OH | KEMBA! LIVE (SUPPORTING CORY WONG)</p>
+      <p>11.16.24 | ROYAL OAK, MI | ROYAL OAK MUSIC THEATRE (SUPPORTING CORY WONG)</p>
+      <p>11.15.24 | TORONTO, ON | HISTORY (SUPPORTING CORY WONG)</p>
+      <p>11.14.24 | PITTSBURGH. PA | STAGE AE (SUPPORTING CORY WONG)</p>
+      <p>11.12.24 | PORTLAND, ME | STATE THEATRE (SUPPORTING CORY WONG)</p>
+      <p>11.11.24 | NEW HAVEN, CT | COLLEGE STREET MUSIC HALL (SUPPORTING CORY WONG)</p>
+      <p>11.09.24 | BOSTON, MA | ROADRUNNER (SUPPORTING CORY WONG)</p>
+      <p>11.08.24 | PHILADELPHIA, PA | THE MET (SUPPORTING CORY WONG)</p>
+      <p>11.07.24 | BROOKLYN, NY | KINGS THEATRE (SUPPORTING CORY WONG)</p>
+      <p>11.06.24 | WASHINGTON D.C. | THE ANTHEM (SUPPORTING CORY WONG)</p>
+      <p>11.04.24 | RICHMOND, VA | THE NATIONAL (SUPPORTING CORY WONG)</p>
+      <p>11.02.24 | CHARLOTTE, NC | THE FILLMORE (SUPPORTING CORY WONG)</p>
+      <p>11.01.24 | ATLANTA, GA | THE EASTERN (SUPPORTING CORY WONG)</p>
+      <p>10.31.24 | NASHVILLE, TN | THE RYMAN AUDITORIUM (SUPPORTING CORY WONG)</p>
+      <p>10.30.24 | NASHVILLE, TN | THE RYMAN AUDITORIUM (SUPPORTING CORY WONG)</p>
+      <p>10.29.24 | ST. LOUIS, MO | THE PAGEANT THEATRE (SUPPORTING CORY WONG)</p>
+      <p>10.19.24 | CONCORD, NH | CONCORD SOUND AND COLOR (SOLD OUT)</p>
+      <p>10.6.24 | LARCHMONT, NY | STEINY FEST</p>
+      <p>9.13.24 | VANCOUVER, BC | BARNSIDE HARVEST FESTIVAL</p>
+      <p>8.12.24 | DILLON, CO | DILLON AMPHITHEATER</p>
+      <p>8.11.24 | NORWOOD, CO | MUSIC ON THE MESA</p>
+      <p>8.10.24 | SANTA FE, NM | SANTA FE SUMMER SCENE</p>
+      <p>8.3.24 | QUINCY, MA | DOUG FLUTIE FOUNDATION FOR AUTISM</p>
+      <p>7.27.24 | JOHNSTOWN, PA | FLOOD CITY MUSIC FESTIVAL</p>
+      <p>7.21.24 | ROWAYTON, CT | ROWAYTON SUMMER SERIES</p>
+      <p>7.18.24 | NORTH TRURO, MA | PAYOMET PAC</p>
+      <p>7.13.24 | MONTPELIER, VT | DO GOOD FEST</p>
+      <p>7.10.24 | LONDONDERRY, NH | CONCERTS IN THE COMMON</p>
+      <p>7.6.24 | SHERMAN, NY | GREAT BLUE HERON FESTIVAL</p>
+      <p>7.4.24 | PLATTSBURGH, NY | SUMMER CONCERT SERIES</p>
+      <p>6.21.24 | ELKHART, IN | ELKHART JAZZ FESTIVAL</p>
+      <p>6.16.24 | PETALUMA, CA | MYSTIC THEATRE</p>
+      <p>6.14.24 | BERKELEY, CA | CORNERSTONE (SOLD OUT)</p>
+      <p>6.13.24 | FELTON, CA | FELTON MUSIC HALL</p>
+      <p>6.01.24 | WESTPORT, CT | WESTPORT LEVITT PAVILION (SOLD OUT)</p>
+      <p>5.24.24 | MARTINSVILLE, VA | ROOSTER WALK MUSIC FESTIVAL</p>
+      <p>4.13.24 | PROVIDENCE, RI | FETE MUSIC HALL</p>
+      <p>4.12.24 | PORTSMOUTH, NH | 3S ARTSPACE (SOLD OUT)</p>
+      <p>4.11.24 | ALBANY, NY | LARK HALL</p>
+      <p>4.6.24 | HARRISBURG, PA | STAGE ON HERR</p>
+      <p>4.5.24 | BALTIMORE, MD | THE 8X10 (SOLD OUT)</p>
+      <p>4.4.24 | ASBURY PARK, NJ | WONDER BAR</p>
+      <p>3.30.24 | ITHACA, NY | DEEP DIVE (SOLD OUT)</p>
+      <p>3.29.24 | SYRACUSE, NY | THE WESTCOTT THEATRE</p>
+      <p>3.28.24 | AMHERST, MA | THE DRAKE (SOLD OUT)</p>
+      <p>2.10.24 | MORRISVILLE, PA | GET OUT THE VOTE!</p>
+      <p>1.27.24 | INDIANAPOLIS, IN | THE VOGUE THEATRE</p>
+      <p>1.26.24 | CHICAGO, IL | PARK WEST</p>
+      <p>1.25.24 | DETROIT, MI | MAGIC STICK</p>
+    </details>
+    <details>
+      <summary>2023</summary>
+      <p>12.16.23 | DALLAS, TX | CLUB DADA</p>
+      <p>12.15.23 | AUSTIN, TX | PARISH</p>
+      <p>12.8.23 | DENVER, CO | CERVANTES’ MASTERPIECE BALLROOM</p>
+      <p>12.2.23 | LOS ANGELES, CA | EL REY THEATRE (SOLD OUT)</p>
+      <p>12.1.23 | SAN FRANCISCO, CA | THE INDEPENDENT (SOLD OUT)</p>
+      <p>11.30.23 | PORTLAND, OR | MISSISSIPPI STUDIOS</p>
+      <p>11.29.23 | SEATTLE, WA | THE CROCODILE</p>
+      <p>11.18.23 | WASHINGTON, DC | THE ATLANTIS (SOLD OUT)</p>
+      <p>11.17.23 | PHILADELPHIA, PA | THE FOUNDRY (SOLD OUT)</p>
+      <p>11.16.23 | BRIDGEPORT, CT | PARK CITY MUSIC HALL</p>
+      <p>11.11.23 | BROOKLYN, NY | BROOKLYN BOWL (SOLD OUT)</p>
+      <p>11.10.23 | BOSTON, MA | ROYALE (SOLD OUT)</p>
+      <p>11.4.23 | BURLINGTON, VT | CLUB METRONOME (SOLD OUT)</p>
+      <p>10.28.23 | LIVE OAK, FL | SUWANNEE HULAWEEN</p>
+      <p>10.8.23 | FRANKLIN, VA | RIVER ROAD FARM (SOLD OUT)</p>
+      <p>10.7.23 | ATLANTA, GA | AISLE 5</p>
+      <p>10.6.23 | CHARLOTTE, NC | VISULITE THEATRE</p>
+      <p>9.23.23 | SMITHFIELD, RI | BRYANT UNIVERSITY</p>
+      <p>9.22.23 | NEW YORK, NY | TIMES SQUARE</p>
+      <p>8.6.23 | FALMOUTH, MA | CROOKED COAST FEST</p>
+      <p>7.30.23 | VENTOR, NJ | FUNKY PICKLE PICKLEBALL TOURNAMENT (RAINED OUT)</p>
+      <p>7.29.23 | SCHAGHTICOKE, NY | RYE BREAD MUSIC &amp; ARTS FESTIVAL</p>
+      <p>7.22.23 | NEWTON, MA | NEWTON FESTIVAL OF THE ARTS</p>
+      <p>7.20.23 | CAMBRIDGE, MA | CX SUMMER NIGHTS</p>
+      <p>7.9.23 | MARSHFIELD, MA | LEVITATE MUSIC &amp; ARTS FESTIVAL (MAIN STAGE)</p>
+      <p>7.1.23 | SHERMAN, NY | GREAT BLUE HERON FESTIVAL (MAIN STAGE)</p>
+      <p>6.30.23 | SCRANTON, PA | PEACH MUSIC FESTIVAL (MUSHROOM STAGE)</p>
+      <p>6.24.23 | ELKHART, IN | ELKHART JAZZ FESTIVAL (CENTRAL PARK STAGE)</p>
+      <p>6.23.23 | INDIANAPOLIS, IN | HIFI ANNEX</p>
+      <p>6.10.23 | CLEVELAND, OH | FWD DAY &amp; NIGHT CLUB (MEDWISH BANDAID BASH)</p>
+      <p>5.28.23 | BOSTON, MA | BOSTON CALLING MUSIC FESTIVAL</p>
+      <p>5.24.23 | SAN FRANCISCO, CA | BLACK CAT (NIGHT 2 LATE SHOW, SOLD OUT)</p>
+      <p>5.24.23 | SAN FRANCISCO, CA | BLACK CAT (NIGHT 2 EARLY SHOW, SOLD OUT)</p>
+      <p>5.23.23 | SANTA CRUZ, CA | MOE’S ALLEY</p>
+      <p>5.21.23 | SAN FRANCISCO, CA | BLACK CAT (NIGHT 1 LATE SHOW, SOLD OUT)</p>
+      <p>5.21.23 | SAN FRANCISCO, CA | BLACK CAT (NIGHT 1 EARLY SHOW, SOLD OUT)</p>
+      <p>5.19.23 | LOS ANGELES, CA | PEPPERMINT CLUB (SOLD OUT)</p>
+      <p>5.18.23 | LOS ANGELES, CA | PEPPERMINT CLUB (SOLD OUT)</p>
+      <p>5.14.23 | PLACERVILLE, CA | GOLDEN ROAD GATHERING</p>
+      <p>5.12.23 | PORTLAND, OR | STAGE 722 (SOLD OUT)</p>
+      <p>5.11.23 | SEATTLE, WA | MADAME LOU’S (SOLD OUT)</p>
+      <p>4.15.23 | NEW YORK, NEW YORK | TERMINAL 5 (SUPPORTING RIPE - SOLD OUT)</p>
+      <p>4.14.23 | PHILADELPHIA, PA | BROOKLYN BOWL (SUPPORTING RIPE - SOLD OUT)</p>
+      <p>4.13.23 | WASHINGTON, DC | 930 CLUB (SUPPORTING RIPE - SOLD OUT)</p>
+      <p>4.12.23 | PITTSBURGH, PA | MR. SMALLS THEATRE (SUPPORTING RIPE)</p>
+      <p>4.11.23 | CLEVELAND, OH | BEACHLAND BALLROOM (SUPPORTING RIPE)</p>
+      <p>4.8.23 | BOSTON, MA | MGM FENWAY (SUPPORTING RIPE – SOLD OUT)</p>
+      <p>4.2.23 | MANCHESTER, UK | BAND ON THE WALL</p>
+      <p>3.31.23 | BIRMINGHAM, UK | SUNFLOWER LOUNGE (SOLD OUT)</p>
+      <p>3.30.23 | LONDON, UK | JAZZ CAFE (SOLD OUT)</p>
+      <p>3.4.23 | PORTSMOUTH, NH | 3S ARTSPACE</p>
+      <p>3.3.23 | BURLINGTON, VT | NECTAR’S (SOLD OUT)</p>
+      <p>3.2.23 | KILLINGTON, VT | PICKLE BARREL NIGHTCLUB (CANCELLED)</p>
+      <p>2.11.23 | Hackensack, NJ | HACPAC</p>
+      <p>1.28.23 | INDIANAPOLIS, IN | HI-FI — SOLD OUT</p>
+      <p>1.27.23 | CHICAGO, IL | LINCOLN HALL — SOLD OUT</p>
+      <p>1.26.23 | FERNDALE, MI | OTUS SUPPLY — SOLD OUT</p>
+    </details>
+    <details>
+      <summary>2022</summary>
+      <p>12.31.22 | PHILADELPHIA, PA | BROOKLYN BOWL (supporting St. Paul &amp; The Broken Bones) — SOLD OUT</p>
+      <p>12.16.22 | ATLANTA, GA | AISLE 5</p>
+      <p>12.15.22 | ASHEVILLE, NC | ASHEVILLE</p>
+      <p>12.3.22 | ALLENTOWN, PA | MUHLENBERG COLLEGE</p>
+      <p>12.1.22 | ITHICA, NY | DEEP DIVE</p>
+      <p>11.18.22 | MILLERSVILLE, PA | PHANTOM POWER</p>
+      <p>11.17.22 | WASHINGTON, DC | PEARL STREET WAREHOUSE — SOLD OUT</p>
+      <p>11.11.22. | DENVER, CO | CERVANTES' OTHER SIDE — SOLD OUT</p>
+      <p>10.15.22 | NEW YORK, NY | GRAMERCY THEATRE</p>
+      <p>10.14.22 | PAWTUCKET, RI | THE MET</p>
+      <p>10.6.22 | DAYTON, OH | BRIGHTSIDE MUSIC</p>
+      <p>9.17.22 | BALTIMORE, MD | METRO GALLERY</p>
+      <p>9.15.22 | PHILADELPHIA, PA | THE FOUNDRY</p>
+      <p>9.10.22 | BOSTON, MA | THE SINCLAIR — SOLD OUT</p>
+      <p>9.9.22 | BURLINGTON, VT | FOAM BREWERS — SOLD OUT</p>
+      <p>8.31.22 | WATERTOWN, MA | ARSENAL YARDS — SOLD OUT</p>
+      <p>7.29.22 | LOUSIVILLE, CO | LOUISVILLE STREET FAIRE</p>
+      <p>7.27.22 | CRESTED BUTTE, CO | LIVE! FROM MT. CRESTED BUTTE</p>
+      <p>7.24.22 | NEWTON, MA | NEWTON FESTIVAL OF THE ARTS</p>
+      <p>7.22.22 | CANTERBURY, NH | BARN PARTY MUSIC FESTIVAL</p>
+      <p>7.21.22 | CAMBRIDGE, MA | CX SUMMER NIGHTS</p>
+      <p>7.20.22 | BETHEL, NY | BETHEL WOODS (side stage before Dave Matthews Band)</p>
+      <p>7.16.22 | CHICAGO, IL | NAVY PIER BEER GARDEN</p>
+      <p>7.15.22 THORNVILLE, OH | WERKOUT MUSIC FESTIVAL</p>
+      <p>6.26.22 | PORTLAND, ME | MAINE CRAFT DISTILLING</p>
+      <p>6.25.22 | PORTSMOUTH, NH | PRESS ROOM</p>
+      <p>6.24.22 | YONKERS, NY | MUSIC IN THE STREETS | 6.24</p>
+      <p>6.23.22 | WHITE PLAINS, NY | TUNES IN JUNE</p>
+      <p>6.21.22 | SELBYVILLE, DE | FREEMAN ARTS PAVILION (supporting Lake Street Dive)</p>
+      <p>6.17.22 | ELKHART, IN | ELKHART JAZZ FESTIVAL</p>
+      <p>5.27.22 | CHILLICOTHE, IL | SUMMER CAMP MUSIC FESTIVAL</p>
+      <p>4.16.22 | BROOKLYN, NY | BROOKLYN BOWL (supporting The Motet)</p>
+      <p>3.18.22 | PAWTUCKET, RI | THE MET (co-headline with Orange Guava Passion)</p>
+      <p>3.5.22 | BROOKLYN, NY | KNITTING FACTORY — SOLD OUT</p>
+    </details>
+    <details>
+      <summary>2021</summary>
+      <p>12.10 | NEW YORK, NY | IRVING PLAZA (supporting Juice) — SOLD OUT</p>
+      <p>12.4.21 | BOSTON, MA | PARADISE ROCK (supporting Juice) — SOLD OUT</p>
+      <p>10.16.21 | NORTHAMPTON, MA | PEARL STREET (supporting Sammy Rae) — SOLD OUT</p>
+      <p>10.15.21 | BURLINGTON, VT | HIGHER GROUND (supporting Sammy Rae) - SOLD OUT</p>
+      <p>10.14.21 | PAWTUCKET, RI | THE MET (supporting Sammy Rae) — SOLD OUT</p>
+      <p>10.9.21 | WASHINGTON, DC | SONGBYRD MUSIC HOUSE — SOLD OUT</p>
+      <p>10.1.21 | CHICAGO, IL | SCHUBAS TAVERN — SOLD OUT</p>
+      <p>9.18.21 | NEW YORK, NY | ROCKWOOD MUSIC HALL — SOLD OUT</p>
+      <p>9.17.21 | NEW YORK, NY | ROCKWOOD MUSIC HALL — SOLD OUT</p>
+      <p>8.13.21 | CANTERBURY, NH | BARN PARTY MUSIC FESTIVAL</p>
+      <p>8.6.21 | BOSTON, MA | FANEUIL HALL</p>
+      <p>7.31.21 | BOUCKVILLE, NY | THE YARD AMPHITHEATER (supporting Ripe)</p>
+      <p>7.24.21 | SOMERVILLE, MA | ARTS AT THE ARMORY (supporting Mye July)</p>
+      <p>7.23.21 | CAMBRIDGE, MA | PARK SOUNDS</p>
+      <p>7.16.21 | CAMBRIDGE | PORCH FEST</p>
+      <p>7.11.21 | BOSTON, MA | FANEUIL HALL</p>
+    </details>
+  </section>
+</main>
+<footer>
+  <p><strong>Get early access to new songs, tour dates, and Couch exclusives.</strong></p>
+  <a href="/contact" class="btn" style="max-width: 160px; margin: 0.5rem auto 1.5rem; display: inline-block;">Sign Up</a>
+  <div class="social-icons" aria-label="Social media links" style="justify-content: center; gap: 1rem; margin-bottom: 1rem;">
+    <a href="https://open.spotify.com/artist/3nYyLjhw4mYzYfJePsCJYJ?si=hGlKsNmlQMKOBAqMr3NdQQ&amp;nd=1" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false" style="width: 24px; height: 24px; fill: #c94a4a;"><use xlink:href="#spotify-unauth-icon"></use></svg>
+    </a>
+    <a href="https://music.apple.com/ca/artist/couch/1455880800" target="_blank" rel="noopener noreferrer" aria-label="iTunes Store">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false" style="width: 24px; height: 24px; fill: #c94a4a;"><use xlink:href="#itunes-icon"></use></svg>
+    </a>
+    <a href="https://www.youtube.com/channel/UCYOcJ00IMsyv_h9SFtA9EJg" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false" style="width: 24px; height: 24px; fill: #c94a4a;"><use xlink:href="#youtube-unauth-icon"></use></svg>
+    </a>
+    <a href="https://www.instagram.com/couch.theband/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false" style="width: 24px; height: 24px; fill: #c94a4a;"><use xlink:href="#instagram-unauth-icon"></use></svg>
+    </a>
+    <a href="https://www.tiktok.com/@couch.theband?language=en" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false" style="width: 24px; height: 24px; fill: #c94a4a;"><use xlink:href="#tiktok-unauth-icon"></use></svg>
+    </a>
+    <a href="https://www.facebook.com/couchtheband/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false" style="width: 24px; height: 24px; fill: #c94a4a;"><use xlink:href="#facebook-unauth-icon"></use></svg>
+    </a>
+  </div>
+  <p>© 2025 Couch Productions LLC</p>
+</footer>
+
+<!-- Social icons SVG symbols -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <symbol id="spotify-unauth-icon" viewBox="23 23 64 64">
+    <path d="M32,16c-8.8,0-16,7.2-16,16c0,8.8,7.2,16,16,16c8.8,0,16-7.2,16-16C48,23.2,40.8,16,32,16 M39.3,39.1c-0.3,0.5-0.9,0.6-1.4,0.3c-3.8-2.3-8.5-2.8-14.1-1.5c-0.5,0.1-1.1-0.2-1.2-0.7c-0.1-0.5,0.2-1.1,0.8-1.2 c6.1-1.4,11.3-0.8,15.5,1.8C39.5,38,39.6,38.6,39.3,39.1 M41.3,34.7c-0.4,0.6-1.1,0.8-1.7,0.4c-4.3-2.6-10.9-3.4-15.9-1.9 c-0.7,0.2-1.4-0.2-1.6-0.8c-0.2-0.7,0.2-1.4,0.8-1.6c5.8-1.8,13-0.9,18,2.1C41.5,33.4,41.7,34.1,41.3,34.7 M41.5,30.2 c-5.2-3.1-13.7-3.3-18.6-1.9c-0.8,0.2-1.6-0.2-1.9-1c-0.2-0.8,0.2-1.6,1-1.9c5.7-1.7,15-1.4,21,2.1c0.7,0.4,0.9,1.3,0.5,2.1 C43.1,30.4,42.2,30.6,41.5,30.2"></path>
+  </symbol>
+  <symbol id="itunes-icon" viewBox="23 23 64 64">
+    <path d="M41.784,28.836c0,3.5,0.002,7-0.002,10.499c0,0.767-0.105,1.519-0.446,2.217c-0.53,1.086-1.399,1.768-2.55,2.095c-0.642,0.183-1.297,0.288-1.965,0.318c-1.749,0.083-3.261-1.103-3.574-2.823c-0.26-1.419,0.419-2.984,1.91-3.715c0.595-0.294,1.23-0.458,1.871-0.596c0.695-0.15,1.393-0.282,2.084-0.441c0.504-0.116,0.84-0.424,0.939-0.948c0.023-0.116,0.033-0.236,0.033-0.355c0.002-3.336,0.002-6.67-0.002-10.005c0-0.114-0.019-0.23-0.047-0.34c-0.072-0.277-0.274-0.446-0.559-0.43c-0.294,0.017-0.584,0.064-0.873,0.122c-1.397,0.275-2.793,0.559-4.189,0.84c-1.425,0.286-2.851,0.576-4.278,0.864c-0.842,0.171-1.684,0.34-2.525,0.51c-0.03,0.006-0.059,0.016-0.088,0.023c-0.509,0.141-0.693,0.374-0.717,0.9c-0.003,0.08-0.002,0.16-0.002,0.241c-0.002,4.782,0,9.565-0.003,14.345c0,0.773-0.086,1.537-0.396,2.255c-0.512,1.18-1.416,1.914-2.636,2.269c-0.645,0.186-1.307,0.293-1.976,0.316c-1.762,0.066-3.225-1.105-3.527-2.838c-0.261-1.494,0.422-3.098,2.119-3.816c0.656-0.275,1.344-0.427,2.036-0.571c0.527-0.111,1.056-0.211,1.582-0.324c0.703-0.153,1.07-0.595,1.1-1.313c0.003-0.094,0.002-0.183,0.002-0.277c0-5.44,0-10.882,0.003-16.323c0-0.227,0.023-0.46,0.077-0.681c0.128-0.524,0.502-0.823,1.003-0.953c0.469-0.122,0.947-0.207,1.422-0.304c1.347-0.272,2.694-0.543,4.042-0.814c1.393-0.282,2.784-0.562,4.176-0.843c1.23-0.249,2.46-0.501,3.693-0.743c0.404-0.08,0.814-0.161,1.22-0.194c0.57-0.045,0.961,0.313,1.019,0.886c0.014,0.136,0.022,0.274,0.022,0.412C41.786,21.814,41.786,25.325,41.784,28.836L41.784,28.836z"></path>
+  </symbol>
+  <symbol id="youtube-unauth-icon" viewBox="23 23 64 64">
+    <path d="M46.7,26c0,0-0.3-2.1-1.2-3c-1.1-1.2-2.4-1.2-3-1.3C38.3,21.4,32,21.4,32,21.4h0 c0,0-6.3,0-10.5,0.3c-0.6,0.1-1.9,0.1-3,1.3c-0.9,0.9-1.2,3-1.2,3S17,28.4,17,30.9v2.3c0,2.4,0.3,4.9,0.3,4.9s0.3,2.1,1.2,3 c1.1,1.2,2.6,1.2,3.3,1.3c2.4,0.2,10.2,0.3,10.2,0.3s6.3,0,10.5-0.3c0.6-0.1,1.9-0.1,3-1.3c0.9-0.9,1.2-3,1.2-3s0.3-2.4,0.3-4.9 v-2.3C47,28.4,46.7,26,46.7,26z M28.9,35.9l0-8.4l8.1,4.2L28.9,35.9z"></path>
+  </symbol>
+  <symbol id="instagram-unauth-icon" viewBox="23 23 64 64">
+    <path d="M46.91,25.816c-0.073-1.597-0.326-2.687-0.697-3.641c-0.383-0.986-0.896-1.823-1.73-2.657c-0.834-0.834-1.67-1.347-2.657-1.73c-0.954-0.371-2.045-0.624-3.641-0.697C36.585,17.017,36.074,17,32,17s-4.585,0.017-6.184,0.09c-1.597,0.073-2.687,0.326-3.641,0.697c-0.986,0.383-1.823,0.896-2.657,1.73c-0.834,0.834-1.347,1.67-1.73,2.657c-0.371,0.954-0.624,2.045-0.697,3.641C17.017,27.415,17,27.926,17,32c0,4.074,0.017,4.585,0.09,6.184c0.073,1.597,0.326,2.687,0.697,3.641c0.383,0.986,0.896,1.823,1.73,2.657c0.834,0.834,1.67,1.347,2.657,1.73c0.954,0.371,2.045,0.624,3.641,0.697C27.415,46.983,27.926,47,32,47s4.585-0.017,6.184-0.09c1.597-0.073,2.687-0.326,3.641-0.697c0.986-0.383,1.823-0.896,2.657-1.73c0.834-0.834,1.347-1.67,1.73-2.657c0.371-0.954,0.624-2.045,0.697-3.641C46.983,36.585,47,36.074,47,32S46.983,27.415,46.91,25.816z M44.21,38.061c-0.067,1.462-0.311,2.257-0.516,2.785c-0.272,0.7-0.597,1.2-1.122,1.725c-0.525,0.525-1.025,0.85-1.725,1.122c-0.529,0.205-1.323,0.45-2.785,0.516c-1.581,0.072-2.056,0.087-6.061,0.087s-4.48-0.015-6.061-0.087c-1.462-0.067-2.257-0.311-2.785-0.516c-0.7-0.272-1.2-0.597-1.725-1.122c-0.525-0.525-0.85-1.025-1.122-1.725c-0.205-0.529-0.45-1.323-0.516-2.785c-0.072-1.582-0.087-2.056-0.087-6.061s0.015-4.48,0.087-6.061c0.067-1.462,0.311-2.257,0.516-2.785c0.272-0.7,0.597-1.2,1.122-1.725c0.525-0.525,1.025-0.85,1.725-1.122c0.529-0.205,1.323-0.45,2.785-0.516c1.582-0.072,2.056-0.087,6.061-0.087s4.48,0.015,6.061,0.087c1.462,0.067,2.257,0.311,2.785,0.516c0.7,0.272,1.2,0.597,1.725,1.122c0.525,0.525,0.85,1.025,1.122,1.725c0.205,0.529,0.45,1.323,0.516,2.785c0.072,1.582,0.087,2.056,0.087,6.061S44.282,36.48,44.21,38.061z M32,24.297c-4.254,0-7.703,3.449-7.703,7.703c0,4.254,3.449,7.703,7.703,7.703c4.254,0,7.703-3.449,7.703-7.703C39.703,27.746,36.254,24.297,32,24.297z M32,37c-2.761,0-5-2.239-5-5c0-2.761,2.239-5,5-5s5,2.239,5,5C37,34.761,34.761,37,32,37z M40.007,22.193c-0.994,0-1.8,0.806-1.8,1.8c0,0.994,0.806,1.8,1.8,1.8c0.994,0,1.8-0.806,1.8-1.8C41.807,22.999,41.001,22.193,40.007,22.193z"></path>
+  </symbol>
+  <symbol id="tiktok-unauth-icon" viewBox="23 23 64 64">
+    <path d="M37.9281 17C38.4298 21.2545 40.825 23.7941 45 24.0658V28.8451C42.5859 29.0794 40.4652 28.3016 38.0038 26.821V35.7423C38.0038 47.147 25.4788 50.7361 20.4233 42.5457C17.1856 37.3073 19.1642 28.1048 29.5496 27.73V32.781C28.7296 32.9058 27.9219 33.1002 27.1355 33.362C24.835 34.1398 23.5191 35.583 23.8883 38.1413C24.5889 43.033 33.6584 44.4856 32.901 34.9176V17H37.9091H37.9281Z"></path>
+  </symbol>
+  <symbol id="facebook-unauth-icon" viewBox="23 23 64 64">
+    <path d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z"></path>
+  </symbol>
+</svg>
+</body>
+</html>

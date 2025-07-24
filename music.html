@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MUSIC — Couch</title>
+  <link rel="icon" type="image/x-icon" href="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/dc761829-6334-4e5b-a982-2f090b44ec28/favicon.ico?format=100w" />
+  <link rel="canonical" href="https://www.couchtheband.com/music" />
+  <meta name="description" content='Listen to Couch. "Sunshower - EP " Out Now!' />
+  <style>
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/dc315816-0c7f-4c4a-be1f-1442ef447b8c/4x5+press.jpg') center/cover no-repeat fixed;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #b38b89;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    a:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+    h2, h3 {
+      margin: 0 0 1rem;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+    h3 {
+      font-size: 1.25rem;
+      margin-top: 2rem;
+    }
+    main {
+      max-width: 1200px;
+      margin: 2rem auto 0;
+      background: rgba(0,0,0,0.65);
+      padding: 2rem 1rem 4rem;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    /* Navigation */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 100;
+    }
+    nav {
+      display: flex;
+      gap: 1.5rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    nav a {
+      color: white;
+      padding: 0.25rem 0;
+      position: relative;
+    }
+    nav a[aria-current="page"]::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: white;
+      border-radius: 2px;
+    }
+    .logo img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+    /* Social icons container */
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .social-icons a svg {
+      width: 24px;
+      height: 24px;
+      fill: white;
+      transition: fill 0.3s ease;
+    }
+    .social-icons a:hover svg,
+    .social-icons a:focus svg {
+      fill: #c94f4f;
+      outline: none;
+    }
+    /* Music platforms grid */
+    .platforms {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+      gap: 1.5rem 3rem;
+      justify-items: center;
+      align-items: center;
+      margin: 1rem 0 2rem;
+      width: 100%;
+      max-width: 700px;
+    }
+    .platforms a img {
+      max-width: 140px;
+      height: auto;
+      filter: brightness(1) saturate(1);
+      transition: filter 0.3s ease;
+    }
+    .platforms a:hover img,
+    .platforms a:focus img {
+      filter: brightness(1.2) saturate(1.3);
+      outline: none;
+    }
+    /* Spotify embeds container */
+    .spotify-embeds {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      width: 100%;
+      max-width: 900px;
+      margin-top: 1rem;
+    }
+    .spotify-embeds iframe {
+      border-radius: 12px;
+      border: none;
+      width: 100%;
+      max-width: 450px;
+      height: 370px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      background: #121212;
+    }
+    /* Footer */
+    footer {
+      background: #fff;
+      color: #a94444;
+      text-align: center;
+      padding: 1rem 1rem 3rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      font-family: 'Poppins', sans-serif;
+    }
+    footer p {
+      margin: 0.5rem 0 1rem;
+    }
+    .signup-btn {
+      background: #c94f4f;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 0.75rem 2rem;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin: 0.5rem 0 1rem;
+      transition: background-color 0.3s ease;
+    }
+    .signup-btn:hover,
+    .signup-btn:focus {
+      background: #a63f3f;
+      outline: none;
+    }
+    /* Responsive */
+    @media (max-width: 767px) {
+      header {
+        padding: 1rem;
+      }
+      nav {
+        display: none;
+      }
+      .platforms {
+        grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+        gap: 1rem 1.5rem;
+      }
+      .spotify-embeds {
+        flex-direction: column;
+        max-width: 100%;
+      }
+      .spotify-embeds iframe {
+        max-width: 100%;
+        height: 300px;
+      }
+    }
+  </style>
+  <svg style="display:none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <symbol id="spotify-unauth-icon" viewBox="0 0 64 64">
+      <path d="M32,16c-8.8,0-16,7.2-16,16c0,8.8,7.2,16,16,16c8.8,0,16-7.2,16-16C48,23.2,40.8,16,32,16 M39.3,39.1c-0.3,0.5-0.9,0.6-1.4,0.3c-3.8-2.3-8.5-2.8-14.1-1.5c-0.5,0.1-1.1-0.2-1.2-0.7c-0.1-0.5,0.2-1.1,0.8-1.2 c6.1-1.4,11.3-0.8,15.5,1.8C39.5,38,39.6,38.6,39.3,39.1 M41.3,34.7c-0.4,0.6-1.1,0.8-1.7,0.4c-4.3-2.6-10.9-3.4-15.9-1.9 c-0.7,0.2-1.4-0.2-1.6-0.8c-0.2-0.7,0.2-1.4,0.8-1.6c5.8-1.8,13-0.9,18,2.1C41.5,33.4,41.7,34.1,41.3,34.7 M41.5,30.2 c-5.2-3.1-13.7-3.3-18.6-1.9c-0.8,0.2-1.6-0.2-1.9-1c-0.2-0.8,0.2-1.6,1-1.9c5.7-1.7,15-1.4,21,2.1c0.7,0.4,0.9,1.3,0.5,2.1 C43.1,30.4,42.2,30.6,41.5,30.2"></path>
+    </symbol>
+    <symbol id="itunes-icon" viewBox="0 0 64 64">
+      <path d="M41.784,28.836c0,3.5,0.002,7-0.002,10.499c0,0.767-0.105,1.519-0.446,2.217c-0.53,1.086-1.399,1.768-2.55,2.095c-0.642,0.183-1.297,0.288-1.965,0.318c-1.749,0.083-3.261-1.103-3.574-2.823c-0.26-1.419,0.419-2.984,1.91-3.715c0.595-0.294,1.23-0.458,1.871-0.596c0.695-0.15,1.393-0.282,2.084-0.441c0.504-0.116,0.84-0.424,0.939-0.948c0.023-0.116,0.033-0.236,0.033-0.355c0.002-3.336,0.002-6.67-0.002-10.005c0-0.114-0.019-0.23-0.047-0.34c-0.072-0.277-0.274-0.446-0.559-0.43c-0.294,0.017-0.584,0.064-0.873,0.122c-1.397,0.275-2.793,0.559-4.189,0.84c-1.425,0.286-2.851,0.576-4.278,0.864c-0.842,0.171-1.684,0.34-2.525,0.51c-0.03,0.006-0.059,0.016-0.088,0.023c-0.509,0.141-0.693,0.374-0.717,0.9c-0.003,0.08-0.002,0.16-0.002,0.241c-0.002,4.782,0,9.565-0.003,14.345c0,0.773-0.086,1.537-0.396,2.255c-0.512,1.18-1.416,1.914-2.636,2.269c-0.645,0.186-1.307,0.293-1.976,0.316c-1.762,0.066-3.225-1.105-3.527-2.838c-0.261-1.494,0.422-3.098,2.119-3.816c0.656-0.275,1.344-0.427,2.036-0.571c0.527-0.111,1.056-0.211,1.582-0.324c0.703-0.153,1.07-0.595,1.1-1.313c0.003-0.094,0.002-0.183,0.002-0.277c0-5.44,0-10.882,0.003-16.323c0-0.227,0.023-0.46,0.077-0.681c0.128-0.524,0.502-0.823,1.003-0.953c0.469-0.122,0.947-0.207,1.422-0.304c1.347-0.272,2.694-0.543,4.042-0.814c1.393-0.282,2.784-0.562,4.176-0.843c1.23-0.249,2.46-0.501,3.693-0.743c0.404-0.08,0.814-0.161,1.22-0.194c0.57-0.045,0.961,0.313,1.019,0.886c0.014,0.136,0.022,0.274,0.022,0.412C41.786,21.814,41.786,25.325,41.784,28.836L41.784,28.836z"></path>
+    </symbol>
+    <symbol id="youtube-unauth-icon" viewBox="0 0 64 64">
+      <path d="M46.7,26c0,0-0.3-2.1-1.2-3c-1.1-1.2-2.4-1.2-3-1.3C38.3,21.4,32,21.4,32,21.4h0 c0,0-6.3,0-10.5,0.3c-0.6,0.1-1.9,0.1-3,1.3c-0.9,0.9-1.2,3-1.2,3S17,28.4,17,30.9v2.3c0,2.4,0.3,4.9,0.3,4.9s0.3,2.1,1.2,3 c1.1,1.2,2.6,1.2,3.3,1.3c2.4,0.2,10.2,0.3,10.2,0.3s6.3,0,10.5-0.3c0.6-0.1,1.9-0.1,3-1.3c0.9-0.9,1.2-3,1.2-3s0.3-2.4,0.3-4.9 v-2.3C47,28.4,46.7,26,46.7,26z M28.9,35.9l0-8.4l8.1,4.2L28.9,35.9z"></path>
+    </symbol>
+    <symbol id="instagram-unauth-icon" viewBox="0 0 64 64">
+      <path d="M46.91,25.816c-0.073-1.597-0.326-2.687-0.697-3.641c-0.383-0.986-0.896-1.823-1.73-2.657c-0.834-0.834-1.67-1.347-2.657-1.73c-0.954-0.371-2.045-0.624-3.641-0.697C36.585,17.017,36.074,17,32,17s-4.585,0.017-6.184,0.09c-1.597,0.073-2.687,0.326-3.641,0.697c-0.986,0.383-1.823,0.896-2.657,1.73c-0.834,0.834-1.347,1.67-1.73,2.657c-0.371,0.954-0.624,2.045-0.697,3.641C17.017,27.415,17,27.926,17,32c0,4.074,0.017,4.585,0.09,6.184c0.073,1.597,0.326,2.687,0.697,3.641c0.383,0.986,0.896,1.823,1.73,2.657c0.834,0.834,1.67,1.347,2.657,1.73c0.954,0.371,2.045,0.624,3.641,0.697C27.415,46.983,27.926,47,32,47s4.585-0.017,6.184-0.09c1.597-0.073,2.687-0.326,3.641-0.697c0.986-0.383,1.823-0.896,2.657-1.73c0.834-0.834,1.347-1.67,1.73-2.657c0.371-0.954,0.624-2.045,0.697-3.641C46.983,36.585,47,36.074,47,32S46.983,27.415,46.91,25.816z M44.21,38.061c-0.067,1.462-0.311,2.257-0.516,2.785c-0.272,0.7-0.597,1.2-1.122,1.725c-0.525,0.525-1.025,0.85-1.725,1.122c-0.529,0.205-1.323,0.45-2.785,0.516c-1.581,0.072-2.056,0.087-6.061,0.087s-4.48-0.015-6.061-0.087c-1.462-0.067-2.257-0.311-2.785-0.516c-0.7-0.272-1.2-0.597-1.725-1.122c-0.525-0.525-0.85-1.025-1.122-1.725c-0.205-0.529-0.45-1.323-0.516-2.785c-0.072-1.582-0.087-2.056-0.087-6.061s0.015-4.48,0.087-6.061c0.067-1.462,0.311-2.257,0.516-2.785c0.272-0.7,0.597-1.2,1.122-1.725c0.525-0.525,1.025-0.85,1.725-1.122c0.529-0.205,1.323-0.45,2.785-0.516c1.582-0.072,2.056-0.087,6.061-0.087s4.48,0.015,6.061,0.087c1.462,0.067,2.257,0.311,2.785,0.516c0.7,0.272,1.2,0.597,1.725,1.122c0.525,0.525,0.85,1.025,1.122,1.725c0.205,0.529,0.45,1.323,0.516,2.785c0.072,1.582,0.087,2.056,0.087,6.061S44.282,36.48,44.21,38.061z M32,24.297c-4.254,0-7.703,3.449-7.703,7.703c0,4.254,3.449,7.703,7.703,7.703c4.254,0,7.703-3.449,7.703-7.703C39.703,27.746,36.254,24.297,32,24.297z M32,37c-2.761,0-5-2.239-5-5c0-2.761,2.239-5,5-5s5,2.239,5,5C37,34.761,34.761,37,32,37z M40.007,22.193c-0.994,0-1.8,0.806-1.8,1.8c0,0.994,0.806,1.8,1.8,1.8c0.994,0,1.8-0.806,1.8-1.8C41.807,22.999,41.001,22.193,40.007,22.193z"></path>
+    </symbol>
+    <symbol id="tiktok-unauth-icon" viewBox="0 0 64 64">
+      <path d="M37.9281 17C38.4298 21.2545 40.825 23.7941 45 24.0658V28.8451C42.5859 29.0794 40.4652 28.3016 38.0038 26.821V35.7423C38.0038 47.147 25.4788 50.7361 20.4233 42.5457C17.1856 37.3073 19.1642 28.1048 29.5496 27.73V32.781C28.7296 32.9058 27.9219 33.1002 27.1355 33.362C24.835 34.1398 23.5191 35.583 23.8883 38.1413C24.5889 43.033 33.6584 44.4856 32.901 34.9176V17H37.9091H37.9281Z"></path>
+    </symbol>
+    <symbol id="facebook-unauth-icon" viewBox="0 0 64 64">
+      <path d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z"></path>
+    </symbol>
+  </svg>
+</head>
+<body>
+  <header>
+    <nav aria-label="Primary navigation">
+      <a href="/" >Home</a>
+      <a href="/about">About</a>
+      <a href="/tour">Tour</a>
+      <a href="/music" aria-current="page">Music</a>
+      <a href="/videos">Videos</a>
+      <a href="https://couchtheband.myshopify.com" target="_blank" rel="noopener">Merch</a>
+      <a href="/contact">Contact</a>
+    </nav>
+    <a href="/" class="logo" aria-label="Couch homepage">
+      <img src="//images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/86b34548-72f2-4a67-aae6-66ccc494b4e2/PNG_white_COUCH+1.png?format=1500w" alt="Couch" loading="eager" decoding="async" />
+    </a>
+    <div class="social-icons" aria-label="Social media links">
+      <a href="https://open.spotify.com/artist/3nYyLjhw4mYzYfJePsCJYJ?si=hGlKsNmlQMKOBAqMr3NdQQ&amp;nd=1" target="_blank" rel="noopener" aria-label="Spotify">
+        <svg><use xlink:href="#spotify-unauth-icon"></use></svg>
+      </a>
+      <a href="https://music.apple.com/ca/artist/couch/1455880800" target="_blank" rel="noopener" aria-label="iTunes Store">
+        <svg><use xlink:href="#itunes-icon"></use></svg>
+      </a>
+      <a href="https://www.youtube.com/channel/UCYOcJ00IMsyv_h9SFtA9EJg" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg><use xlink:href="#youtube-unauth-icon"></use></svg>
+      </a>
+      <a href="https://www.instagram.com/couch.theband/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg><use xlink:href="#instagram-unauth-icon"></use></svg>
+      </a>
+      <a href="https://www.tiktok.com/@couch.theband?language=en" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg><use xlink:href="#tiktok-unauth-icon"></use></svg>
+      </a>
+      <a href="https://www.facebook.com/couchtheband/" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg><use xlink:href="#facebook-unauth-icon"></use></svg>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <h2>MUSIC</h2>
+    <section class="platforms" aria-label="Music platforms">
+      <a href="https://open.spotify.com/artist/3nYyLjhw4mYzYfJePsCJYJ?si=hGlKsNmlQMKOBAqMr3NdQQ" target="_blank" rel="noopener" aria-label="Spotify">
+        <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/a582278a-0336-4f48-b804-9df44a070211/Spotify_Logo_RGB_White.png" alt="Spotify logo" loading="lazy" decoding="async" />
+      </a>
+      <a href="https://music.apple.com/us/artist/couch/1455880800" target="_blank" rel="noopener" aria-label="Apple Music">
+        <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/64a11ba9-49df-49d0-ae8c-8418322fec31/Apple-Music-Logo_CROPPED.png" alt="Apple Music logo" loading="lazy" decoding="async" />
+      </a>
+      <a href="https://music.youtube.com/channel/UCJkksEaCKsAx6LEAbTQKe8A" target="_blank" rel="noopener" aria-label="YouTube Music">
+        <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/270389c7-f552-48fc-b888-e8febe06979e/Youtube-Music-Logo-1.png" alt="YouTube Music logo" loading="lazy" decoding="async" />
+      </a>
+      <a href="https://www.amazon.com/music/player/artists/B093MRBNBG/couch" target="_blank" rel="noopener" aria-label="Amazon Music">
+        <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/60d996c2-903f-45dd-a83b-0f1de373fca4/AmazonMusicLogo-1.png" alt="Amazon Music logo" loading="lazy" decoding="async" />
+      </a>
+      <a href="https://www.deezer.com/us/artist/75914" target="_blank" rel="noopener" aria-label="Deezer">
+        <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/a89b1c26-3552-4cad-a878-4676c1b0563d/DeezerMusicIcon_WIDE-1.png" alt="Deezer logo" loading="lazy" decoding="async" />
+      </a>
+      <a href="https://tidal.com/browse/artist/3575033" target="_blank" rel="noopener" aria-label="Tidal">
+        <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/48f1c8f1-16e7-4455-8f97-da3110413644/TidalIcon_WIDE+%281%29.png" alt="Tidal logo" loading="lazy" decoding="async" />
+      </a>
+    </section>
+
+    <h3>STUDIO RELEASES</h3>
+    <section class="spotify-embeds" aria-label="Studio releases Spotify embeds">
+      <iframe src="https://open.spotify.com/embed/album/2PTov9H59TMyFQbCBuL4eQ?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Sunshower Album"></iframe>
+      <iframe src="https://open.spotify.com/embed/album/6xECuZMVGYYJN47ZvyJ9c8?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Saturday Album"></iframe>
+    </section>
+
+    <h3>LIVE RELEASES</h3>
+    <section class="spotify-embeds" aria-label="Live releases Spotify embeds">
+      <iframe src="https://open.spotify.com/embed/album/1hfbWeEK7tSRAUZCobGI84?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Live Release 1"></iframe>
+      <iframe src="https://open.spotify.com/embed/album/41QQhJ3HF5OT50b5MP9BgJ?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Live Release 2"></iframe>
+      <iframe src="https://open.spotify.com/embed/album/5uHZZqP0N15zURyP7bgLIt?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Live Release 3"></iframe>
+    </section>
+
+    <h3>BUY COUCH’S MUSIC</h3>
+    <section class="platforms" aria-label="Buy Couch's music platforms">
+      <a href="https://music.apple.com/us/artist/couch/1455880800" target="_blank" rel="noopener" aria-label="iTunes">
+        <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/1718b759-400d-4516-8478-55b373d60b2d/Just+logo.png" alt="iTunes logo" loading="lazy" decoding="async" />
+      </a>
+      <a href="https://couchtheband.bandcamp.com" target="_blank" rel="noopener" aria-label="Bandcamp">
+        <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/df796c20-75c8-42ea-95b4-d4af786c51fe/%2338b6cd+%281%29.png" alt="Bandcamp logo" loading="lazy" decoding="async" />
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Get early access to new songs, tour dates, and Couch exclusives.</p>
+    <a href="/contact" class="signup-btn">Sign Up</a>
+    <div class="social-icons" aria-label="Social media links">
+      <a href="https://open.spotify.com/artist/3nYyLjhw4mYzYfJePsCJYJ?si=hGlKsNmlQMKOBAqMr3NdQQ&amp;nd=1" target="_blank" rel="noopener" aria-label="Spotify">
+        <svg><use xlink:href="#spotify-unauth-icon"></use></svg>
+      </a>
+      <a href="https://music.apple.com/ca/artist/couch/1455880800" target="_blank" rel="noopener" aria-label="iTunes Store">
+        <svg><use xlink:href="#itunes-icon"></use></svg>
+      </a>
+      <a href="https://www.youtube.com/channel/UCYOcJ00IMsyv_h9SFtA9EJg" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg><use xlink:href="#youtube-unauth-icon"></use></svg>
+      </a>
+      <a href="https://www.instagram.com/couch.theband/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg><use xlink:href="#instagram-unauth-icon"></use></svg>
+      </a>
+      <a href="https://www.tiktok.com/@couch.theband?language=en" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg><use xlink:href="#tiktok-unauth-icon"></use></svg>
+      </a>
+      <a href="https://www.facebook.com/couchtheband/" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg><use xlink:href="#facebook-unauth-icon"></use></svg>
+      </a>
+    </div>
+    <p>© 2025 Couch Productions LLC</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ABOUT — Couch</title>
+<meta name="description" content="Couch (The Band) is kicking it old school with a delightful, modern twist. They breathing new life into the pop scene." />
+<link rel="icon" href="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/dc761829-6334-4e5b-a982-2f090b44ec28/favicon.ico?format=100w" type="image/x-icon" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+  :root {
+    --color-primary: #F68A88;
+    --color-secondary: #F8CD51;
+    --color-white: #fff;
+    --color-black: #000;
+    --bg-gradient-start: #d68d8a;
+    --bg-gradient-end: #b38b89;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+    color: var(--color-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  header nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  header nav a {
+    color: var(--color-white);
+    font-weight: 500;
+  }
+  header nav a[aria-current="page"] {
+    text-decoration: underline;
+  }
+  header .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    color: var(--color-white);
+  }
+  header .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  header .social-icons a svg {
+    fill: var(--color-white);
+    width: 20px;
+    height: 20px;
+    transition: fill 0.3s ease;
+  }
+  header .social-icons a:hover svg,
+  header .social-icons a:focus svg {
+    fill: var(--color-primary);
+  }
+  main {
+    max-width: 1200px;
+    margin: 2rem auto 4rem;
+    background: rgba(0,0,0,0.6);
+    padding: 2rem 2rem 3rem;
+    border-radius: 6px;
+  }
+  main h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+  }
+  main p {
+    max-width: 720px;
+    margin: 0 auto 1.25rem;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  main p strong {
+    font-weight: 700;
+  }
+  main p a {
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+  main p a:hover,
+  main p a:focus {
+    text-decoration: underline;
+  }
+  .band-section {
+    margin-top: 3rem;
+  }
+  .band-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    gap: 2rem;
+    justify-items: center;
+    margin-top: 1.5rem;
+  }
+  .band-member {
+    text-align: center;
+  }
+  .band-member img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background: #222;
+  }
+  .band-member-name {
+    margin-top: 0.75rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--color-white);
+  }
+  .band-member-role {
+    font-style: italic;
+    font-weight: 400;
+    color: #ccc;
+    font-size: 0.9rem;
+  }
+  footer {
+    background: var(--color-white);
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #a33c3c;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .footer-cta {
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  .footer-button {
+    background: var(--color-primary);
+    border: none;
+    color: var(--color-white);
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  .footer-button:hover,
+  .footer-button:focus {
+    background: #d66f6f;
+    outline: none;
+  }
+  .footer-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .footer-social-icons a svg {
+    fill: #a33c3c;
+    width: 24px;
+    height: 24px;
+    transition: fill 0.3s ease;
+  }
+  .footer-social-icons a:hover svg,
+  .footer-social-icons a:focus svg {
+    fill: var(--color-primary);
+  }
+  @media (max-width: 767px) {
+    header {
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    header nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      order: 3;
+      width: 100%;
+    }
+    header .logo {
+      order: 2;
+      width: 100%;
+      text-align: center;
+    }
+    header .social-icons {
+      order: 1;
+      width: 100%;
+      justify-content: center;
+    }
+    main {
+      margin: 1rem 1rem 3rem;
+      padding: 1.5rem 1.5rem 2rem;
+    }
+    .band-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .band-member img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav aria-label="Primary navigation">
+    <a href="/">Home</a>
+    <a href="/about" aria-current="page">About</a>
+    <a href="/tour">Tour</a>
+    <a href="/music">Music</a>
+    <a href="/videos">Videos</a>
+    <a href="https://couchtheband.myshopify.com">Merch</a>
+    <a href="/contact">Contact</a>
+  </nav>
+  <div class="logo" aria-label="Couch logo">COUCH</div>
+  <div class="social-icons" aria-label="Social media links">
+    <a href="https://open.spotify.com/artist/3nYyLjhw4mYzYfJePsCJYJ?si=hGlKsNmlQMKOBAqMr3NdQQ&amp;nd=1" target="_blank" rel="noopener" aria-label="Spotify">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#spotify-unauth-icon"></use></svg>
+    </a>
+    <a href="https://music.apple.com/ca/artist/couch/1455880800" target="_blank" rel="noopener" aria-label="iTunes Store">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#itunes-icon"></use></svg>
+    </a>
+    <a href="https://www.youtube.com/channel/UCYOcJ00IMsyv_h9SFtA9EJg" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#youtube-unauth-icon"></use></svg>
+    </a>
+    <a href="https://www.instagram.com/couch.theband/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#instagram-unauth-icon"></use></svg>
+    </a>
+    <a href="https://www.tiktok.com/@couch.theband" target="_blank" rel="noopener" aria-label="TikTok">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#tiktok-unauth-icon"></use></svg>
+    </a>
+    <a href="https://www.facebook.com/couchtheband/" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#facebook-unauth-icon"></use></svg>
+    </a>
+  </div>
+</header>
+<main id="page" role="main">
+  <h2>ABOUT</h2>
+  <p>“Couch is kicking it old school with a delightful, modern twist… [They] are single - or seven-handedly - breathing new life into the pop scene.” - <strong>Sheesh Media</strong></p>
+  <p>Boston-based band Couch injects each project with their signature flavor: expressive horns, warm vocals, and bubbling synths—crafting an oasis of joy for musicians and non-musicians alike.</p>
+  <p>From their formation in 2019 until spring 2021, members of Couch were scattered across the country; they tackled the challenges of being a “long-distance band,” writing and even recording virtually. Despite these challenges, they celebrated the release of their <a href="https://distrokid.com/hyperfollow/couch3/couch"><strong style="color: var(--color-primary)">debut EP, “COUCH,”</strong></a> in February 2021 as well as <a href="http://couchtheband.com/music"><strong style="color: var(--color-primary)">three singles</strong></a> and a <a href="/tour"><strong style="color: var(--color-primary)">20-city headline tour</strong></a> in 2022.</p>
+  <p>In 2023, Couch released their <a href="https://distrokid.com/hyperfollow/couch3/sunshower"><strong style="color: var(--color-primary)">sophomore EP, “Sunshower”</strong></a>, accompanied by a two-part 40-city headline tour, performances at Boston Calling and Levitate, and a sold-out UK tour.</p>
+  <p>This past fall and winter, Couch toured with Cory Wong (Vulfpeck/Fearless Flyers), opening every night of his 38-city US and European tour.</p>
+  <p>Couch recently announced their <a href="/tour"><strong style="color: var(--color-primary)">largest headline shows</strong></a> yet, including stops in Boston (Roadrunner), New York (Brooklyn Steel), and Washington D.C. (9:30 Club).</p>
+  <p>Stay up to date on their activity by following them on <a href="https://www.instagram.com/couch.theband/" target="_blank" rel="noopener"><strong style="color: var(--color-primary)">Instagram</strong></a>, <a href="https://www.facebook.com/couchtheband/"><strong style="color: var(--color-primary)">Facebook</strong></a>, and <a href="https://www.tiktok.com/@couch.theband" target="_blank" rel="noopener"><strong style="color: var(--color-primary)">TikTok</strong></a>.</p>
+
+  <section class="band-section" aria-label="Meet the band">
+    <h2>MEET THE BAND</h2>
+    <div class="band-grid">
+      <div class="band-member">
+        <a href="https://www.instagram.com/temasiegel" target="_blank" rel="noopener">
+          <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/2cb0ae33-5d71-4a01-b170-5516a59f38d3/6.png" alt="Tema Siegel" loading="lazy" />
+        </a>
+        <div class="band-member-name">TEMA SIEGEL</div>
+        <div class="band-member-role">Lead Vocals</div>
+      </div>
+      <div class="band-member">
+        <a href="https://www.instagram.com/couch.theband/" target="_blank" rel="noopener">
+          <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/4819dda4-119a-4daa-b1fe-14bdb6dacf13/1.png" alt="Zach Blankstein" loading="lazy" />
+        </a>
+        <div class="band-member-name">ZACH BLANKSTEIN</div>
+        <div class="band-member-role">Guitar</div>
+      </div>
+      <div class="band-member">
+        <a href="https://jaredgozinsky.com" target="_blank" rel="noopener">
+          <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/068e4c22-064d-4f39-9313-407474c7ed90/4.png" alt="Jared Gozinsky" loading="lazy" />
+        </a>
+        <div class="band-member-name">JARED GOZINSKY</div>
+        <div class="band-member-role">Drums</div>
+      </div>
+      <div class="band-member">
+        <a href="https://www.instagram.com/couch.theband/" target="_blank" rel="noopener">
+          <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/28c2f33c-5b19-4213-86d1-9d9d0845a51e/Website+Pics.png" alt="Will Griffin" loading="lazy" />
+        </a>
+        <div class="band-member-name">WILL GRIFFIN</div>
+        <div class="band-member-role">Bass</div>
+      </div>
+      <div class="band-member">
+        <a href="https://www.instagram.com/danny.silverston/" target="_blank" rel="noopener">
+          <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/314cda0e-6864-4e39-ab42-cba44aac6dad/7.png" alt="Danny Silverston" loading="lazy" />
+        </a>
+        <div class="band-member-name">DANNY SILVERSTON</div>
+        <div class="band-member-role">Keys</div>
+      </div>
+      <div class="band-member">
+        <a href="https://www.instagram.com/jeffreypinskersmith/" target="_blank" rel="noopener">
+          <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/93ab6a14-0f76-4aa4-bc2e-9e8056a56ea1/3.png" alt="Jeffrey Pinsker-Smith" loading="lazy" />
+        </a>
+        <div class="band-member-name">JEFFREY PINSKER-SMITH</div>
+        <div class="band-member-role">Trumpet</div>
+      </div>
+      <div class="band-member">
+        <a href="https://www.instagram.com/erictarlin/" target="_blank" rel="noopener">
+          <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/c310ce0e-1589-4984-bdf2-31ed8ffc88a6/5.png" alt="Eric Tarlin" loading="lazy" />
+        </a>
+        <div class="band-member-name">ERIC TARLIN</div>
+        <div class="band-member-role">Saxophone</div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <p class="footer-cta">Get early access to new songs, tour dates, and Couch exclusives.</p>
+  <a href="/contact" class="footer-button">Sign Up</a>
+  <nav class="footer-social-icons" aria-label="Footer social media links">
+    <a href="https://open.spotify.com/artist/3nYyLjhw4mYzYfJePsCJYJ?si=hGlKsNmlQMKOBAqMr3NdQQ&amp;nd=1" target="_blank" rel="noopener" aria-label="Spotify">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#spotify-unauth-icon"></use></svg>
+    </a>
+    <a href="https://music.apple.com/ca/artist/couch/1455880800" target="_blank" rel="noopener" aria-label="iTunes Store">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#itunes-icon"></use></svg>
+    </a>
+    <a href="https://www.youtube.com/channel/UCYOcJ00IMsyv_h9SFtA9EJg" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#youtube-unauth-icon"></use></svg>
+    </a>
+    <a href="https://www.instagram.com/couch.theband/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#instagram-unauth-icon"></use></svg>
+    </a>
+    <a href="https://www.tiktok.com/@couch.theband" target="_blank" rel="noopener" aria-label="TikTok">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#tiktok-unauth-icon"></use></svg>
+    </a>
+    <a href="https://www.facebook.com/couchtheband/" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#facebook-unauth-icon"></use></svg>
+    </a>
+  </nav>
+  <p>© 2025 Couch Productions LLC</p>
+</footer>
+
+<!-- Social icons SVG symbols -->
+<svg style="display:none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" >
+  <symbol id="spotify-unauth-icon" viewBox="23 23 64 64"><path d="M32,16c-8.8,0-16,7.2-16,16c0,8.8,7.2,16,16,16c8.8,0,16-7.2,16-16C48,23.2,40.8,16,32,16 M39.3,39.1c-0.3,0.5-0.9,0.6-1.4,0.3c-3.8-2.3-8.5-2.8-14.1-1.5c-0.5,0.1-1.1-0.2-1.2-0.7c-0.1-0.5,0.2-1.1,0.8-1.2 c6.1-1.4,11.3-0.8,15.5,1.8C39.5,38,39.6,38.6,39.3,39.1 M41.3,34.7c-0.4,0.6-1.1,0.8-1.7,0.4c-4.3-2.6-10.9-3.4-15.9-1.9 c-0.7,0.2-1.4-0.2-1.6-0.8c-0.2-0.7,0.2-1.4,0.8-1.6c5.8-1.8,13-0.9,18,2.1C41.5,33.4,41.7,34.1,41.3,34.7 M41.5,30.2 c-5.2-3.1-13.7-3.3-18.6-1.9c-0.8,0.2-1.6-0.2-1.9-1c-0.2-0.8,0.2-1.6,1-1.9c5.7-1.7,15-1.4,21,2.1c0.7,0.4,0.9,1.3,0.5,2.1 C43.1,30.4,42.2,30.6,41.5,30.2"></path></symbol>
+  <symbol id="itunes-icon" viewBox="23 23 64 64"><path d="M41.784,28.836c0,3.5,0.002,7-0.002,10.499c0,0.767-0.105,1.519-0.446,2.217c-0.53,1.086-1.399,1.768-2.55,2.095c-0.642,0.183-1.297,0.288-1.965,0.318c-1.749,0.083-3.261-1.103-3.574-2.823c-0.26-1.419,0.419-2.984,1.91-3.715c0.595-0.294,1.23-0.458,1.871-0.596c0.695-0.15,1.393-0.282,2.084-0.441c0.504-0.116,0.84-0.424,0.939-0.948c0.023-0.116,0.033-0.236,0.033-0.355c0.002-3.336,0.002-6.67-0.002-10.005c0-0.114-0.019-0.23-0.047-0.34c-0.072-0.277-0.274-0.446-0.559-0.43c-0.294,0.017-0.584,0.064-0.873,0.122c-1.397,0.275-2.793,0.559-4.189,0.84c-1.425,0.286-2.851,0.576-4.278,0.864c-0.842,0.171-1.684,0.34-2.525,0.51c-0.03,0.006-0.059,0.016-0.088,0.023c-0.509,0.141-0.693,0.374-0.717,0.9c-0.003,0.08-0.002,0.16-0.002,0.241c-0.002,4.782,0,9.565-0.003,14.345c0,0.773-0.086,1.537-0.396,2.255c-0.512,1.18-1.416,1.914-2.636,2.269c-0.645,0.186-1.307,0.293-1.976,0.316c-1.762,0.066-3.225-1.105-3.527-2.838c-0.261-1.494,0.422-3.098,2.119-3.816c0.656-0.275,1.344-0.427,2.036-0.571c0.527-0.111,1.056-0.211,1.582-0.324c0.703-0.153,1.07-0.595,1.1-1.313c0.003-0.094,0.002-0.183,0.002-0.277c0-5.44,0-10.882,0.003-16.323c0-0.227,0.023-0.46,0.077-0.681c0.128-0.524,0.502-0.823,1.003-0.953c0.469-0.122,0.947-0.207,1.422-0.304c1.347-0.272,2.694-0.543,4.042-0.814c1.393-0.282,2.784-0.562,4.176-0.843c1.23-0.249,2.46-0.501,3.693-0.743c0.404-0.08,0.814-0.161,1.22-0.194c0.57-0.045,0.961,0.313,1.019,0.886c0.014,0.136,0.022,0.274,0.022,0.412C41.786,21.814,41.786,25.325,41.784,28.836L41.784,28.836z"></path></symbol>
+  <symbol id="youtube-unauth-icon" viewBox="23 23 64 64"><path d="M46.7,26c0,0-0.3-2.1-1.2-3c-1.1-1.2-2.4-1.2-3-1.3C38.3,21.4,32,21.4,32,21.4h0 c0,0-6.3,0-10.5,0.3c-0.6,0.1-1.9,0.1-3,1.3c-0.9,0.9-1.2,3-1.2,3S17,28.4,17,30.9v2.3c0,2.4,0.3,4.9,0.3,4.9s0.3,2.1,1.2,3 c1.1,1.2,2.6,1.2,3.3,1.3c2.4,0.2,10.2,0.3,10.2,0.3s6.3,0,10.5-0.3c0.6-0.1,1.9-0.1,3-1.3c0.9-0.9,1.2-3,1.2-3s0.3-2.4,0.3-4.9 v-2.3C47,28.4,46.7,26,46.7,26z M28.9,35.9l0-8.4l8.1,4.2L28.9,35.9z"></path></symbol>
+  <symbol id="instagram-unauth-icon" viewBox="23 23 64 64"><path d="M46.91,25.816c-0.073-1.597-0.326-2.687-0.697-3.641c-0.383-0.986-0.896-1.823-1.73-2.657c-0.834-0.834-1.67-1.347-2.657-1.73c-0.954-0.371-2.045-0.624-3.641-0.697C36.585,17.017,36.074,17,32,17s-4.585,0.017-6.184,0.09c-1.597,0.073-2.687,0.326-3.641,0.697c-0.986,0.383-1.823,0.896-2.657,1.73c-0.834,0.834-1.347,1.67-1.73,2.657c-0.371,0.954-0.624,2.045-0.697,3.641C17.017,27.415,17,27.926,17,32c0,4.074,0.017,4.585,0.09,6.184c0.073,1.597,0.326,2.687,0.697,3.641c0.383,0.986,0.896,1.823,1.73,2.657c0.834,0.834,1.67,1.347,2.657,1.73c0.954,0.371,2.045,0.624,3.641,0.697C27.415,46.983,27.926,47,32,47s4.585-0.017,6.184-0.09c1.597-0.073,2.687-0.326,3.641-0.697c0.986-0.383,1.823-0.896,2.657-1.73c0.834-0.834,1.347-1.67,1.73-2.657c0.371-0.954,0.624-2.045,0.697-3.641C46.983,36.585,47,36.074,47,32S46.983,27.415,46.91,25.816z"></path></symbol>
+  <symbol id="tiktok-unauth-icon" viewBox="23 23 64 64"><path d="M37.9281 17C38.4298 21.2545 40.825 23.7941 45 24.0658V28.8451C42.5859 29.0794 40.4652 28.3016 38.0038 26.821V35.7423C38.0038 47.147 25.4788 50.7361 20.4233 42.5457C17.1856 37.3073 19.1642 28.1048 29.5496 27.73V32.781C28.7296 32.9058 27.9219 33.1002 27.1355 33.362C24.835 34.1398 23.5191 35.583 23.8883 38.1413C24.5889 43.033 33.6584 44.4856 32.901 34.9176V17H37.9091H37.9281Z"></path></symbol>
+  <symbol id="facebook-unauth-icon" viewBox="23 23 64 64"><path d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z"></path></symbol>
+</svg>
+</body>
+</html>
