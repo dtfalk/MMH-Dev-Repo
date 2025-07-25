@@ -36,3 +36,8 @@ footer .social-icons-footer a {
 footer .social-icons-footer a:hover {
     opacity: 1;
 }
+footer a svg {
+    fill: #a33c3c;
+    width: 2rem;
+    height: 2rem;
+}
