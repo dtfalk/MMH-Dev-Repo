@@ -16,13 +16,24 @@
 <meta name="twitter:description" content="Music videos. Live videos. Acoustic videos. Lyric videos. Featuring Couch (Boston-based band)." />
 <meta name="twitter:image" content="http://static1.squarespace.com/static/63cb777a28ce4e12435b075a/t/6545692f9e291b49e92c8b6d/1752823984265/Social+Image+Squarespace.png?format=1500w" />
 <link rel="icon" href="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/dc761829-6334-4e5b-a982-2f090b44ec28/favicon.ico?format=100w" type="image/x-icon" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="/css/header.css">
+<link rel="stylesheet" href="/css/footer.css">
 <style>
   /* Reset and base */
   *, *::before, *::after {
     box-sizing: border-box;
   }
-  body {
-    margin: 0; font-family: 'Poppins', sans-serif; background: #000; color: #fff; line-height: 1.4;
+   body {
+    margin: 0; 
+    font-family: 'Poppins', sans-serif; 
+    color: white;
+    scroll-behavior: smooth; 
+    min-height: 100%;
+    background-image: url('/media-content/music.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   a {
     color: inherit; text-decoration: none;
@@ -40,46 +51,10 @@
   .container {
     max-width: 1200px; margin: 0 auto; padding: 0 1rem;
   }
-  /* Header */
-  header {
-    background: transparent;
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-    display: flex; justify-content: center; border-bottom: 1px solid rgba(255 255 255 / 0.1);
-    padding: 1rem 0;
-  }
-  nav {
-    display: flex; gap: 2rem; align-items: center;
-  }
-  nav a {
-    font-weight: 500; font-size: 0.9rem; letter-spacing: 0.05em;
-  }
-  nav a[aria-current="page"] {
-    font-weight: 700; border-bottom: 2px solid #fff; padding-bottom: 2px;
-  }
-  .logo {
-    margin: 0 2rem;
-    display: flex; align-items: center;
-  }
-  .logo img {
-    height: 40px; width: auto;
-    display: block;
-  }
-  /* Social icons container */
-  .social-icons {
-    display: flex; gap: 1rem; align-items: center;
-  }
-  .social-icons a svg {
-    width: 20px; height: 20px; fill: #fff;
-    transition: fill 0.3s ease;
-  }
-  .social-icons a:hover svg,
-  .social-icons a:focus svg {
-    fill: #f33;
-  }
   /* Main content */
   main {
     padding-top: 90px;
-    background: url('https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/7921a5ee-6a2c-4c4a-9ba7-c3585f9c1fae/Untitled+design+%2831%29.png') no-repeat center bottom;
+    background: url('/media-content/videos-2.jpg') no-repeat center bottom;
     background-size: cover;
     min-height: 100vh;
     display: flex;
@@ -128,17 +103,6 @@
     border: none;
     border-radius: 4px;
   }
-  /* Footer */
-  footer {
-    background: #fff;
-    color: #900;
-    text-align: center;
-    padding: 2rem 1rem 3rem 1rem;
-    font-size: 0.9rem;
-  }
-  footer p {
-    margin: 0.5rem 0;
-  }
   .signup-btn {
     display: inline-block;
     background: #900;
@@ -156,14 +120,7 @@
     background: #b00;
   }
   /* Responsive adjustments */
-  @media (max-width: 600px) {
-    nav {
-      gap: 1rem;
-      font-size: 0.8rem;
-    }
-    .logo {
-      margin: 0 1rem;
-    }
+  @media (max-width: 1010px) {
     main {
       padding: 90px 1rem 2rem 1rem;
     }
@@ -175,109 +132,23 @@
 </style>
 </head>
 <body>
-<header>
-  <nav aria-label="Primary navigation">
-    <a href="/" >Home</a>
-    <a href="/about" >About</a>
-    <a href="/tour" >Tour</a>
-    <a href="/music" >Music</a>
-    <a href="/videos" aria-current="page">Videos</a>
-    <a href="https://couchtheband.myshopify.com" target="_blank" rel="noopener">Merch</a>
-    <a href="/contact" >Contact</a>
-  </nav>
-  <a href="/" class="logo" aria-label="Couch homepage">
-    <img src="//images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/86b34548-72f2-4a67-aae6-66ccc494b4e2/PNG_white_COUCH+1.png?format=1500w" alt="Couch" loading="eager" decoding="async" />
-  </a>
-  <nav class="social-icons" aria-label="Social media links">
-    <a href="https://open.spotify.com/artist/3nYyLjhw4mYzYfJePsCJYJ?si=hGlKsNmlQMKOBAqMr3NdQQ&amp;nd=1" target="_blank" rel="noopener" aria-label="Spotify">
-      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#spotify-unauth-icon"></use></svg>
-    </a>
-    <a href="https://music.apple.com/ca/artist/couch/1455880800" target="_blank" rel="noopener" aria-label="iTunes Store">
-      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#itunes-icon"></use></svg>
-    </a>
-    <a href="https://www.youtube.com/channel/UCYOcJ00IMsyv_h9SFtA9EJg" target="_blank" rel="noopener" aria-label="YouTube">
-      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#youtube-unauth-icon"></use></svg>
-    </a>
-    <a href="https://www.instagram.com/couch.theband/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
-      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#instagram-unauth-icon"></use></svg>
-    </a>
-    <a href="https://www.tiktok.com/@couch.theband?language=en" target="_blank" rel="noopener" aria-label="TikTok">
-      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#tiktok-unauth-icon"></use></svg>
-    </a>
-    <a href="https://www.facebook.com/couchtheband/" target="_blank" rel="noopener" aria-label="Facebook">
-      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#facebook-unauth-icon"></use></svg>
-    </a>
-  </nav>
-</header>
+  <!-- Placeholder header that will be populated with the HTML from "global-html/header.html" due to our fragment loader -->
+<div id="header-placeholder"></div>
 <main>
-  <h2 class="section-title" aria-label="Page title">VIDEOS</h2>
-  <p class="loading-note" aria-live="polite">…may take a few seconds to load</p>
 
   <section class="videos-section" aria-labelledby="live-videos-title">
-    <h3 id="live-videos-title">LIVE</h3>
+    <center><strong><h2 id="live-videos-title">Music Videos</h2></strong></center>
     <div class="videos-grid">
-      <iframe src="https://www.youtube.com/embed/LSDvKrQh2gI" title="Live video 1" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/GvoJaFRUJsI" title="Live video 2" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/0Z6KpJlqxvw" title="Live video 3" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/NQxmxDXlcfI" title="Live video 4" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/UWZgF8JRni4?si=nyKhuR4ZPzCuHQrN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/l_4Wr4e9Tts?si=X8j2DH1gGlEOk_OB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/fenM8Hr4OIM?si=hCYs8mBlRujD97YF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/gBGYGVzh6sk?si=PGH2nmKXzgwQA0Va" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   </section>
 
-  <section class="videos-section" aria-labelledby="acoustic-videos-title">
-    <h3 id="acoustic-videos-title">ACOUSTIC</h3>
-    <div class="videos-grid">
-      <iframe src="https://www.youtube.com/embed/uppqXRFlrss" title="Acoustic video 1" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/AUSgwfBbB8o" title="Acoustic video 2" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/olXmoHwblhU" title="Acoustic video 3" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/ZTG7TLxozso" title="Acoustic video 4" allowfullscreen></iframe>
-    </div>
-  </section>
-
-  <section class="videos-section" aria-labelledby="lyric-videos-title">
-    <h3 id="lyric-videos-title">LYRIC VIDEOS</h3>
-    <div class="videos-grid">
-      <iframe src="https://www.youtube.com/embed/i2u_BHEavu8" title="Lyric video 1" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/dFrtX4BXxYw" title="Lyric video 2" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/JRwIaBva4Ks" title="Lyric video 3" allowfullscreen></iframe>
-    </div>
-  </section>
-
-  <section class="videos-section" aria-labelledby="feat-couch-videos-title">
-    <h3 id="feat-couch-videos-title">FEAT. COUCH</h3>
-    <div class="videos-grid">
-      <iframe src="https://www.youtube.com/embed/AMyWt5SynrI" title="Feat Couch video 1" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/bsWtLgGU4so" title="Feat Couch video 2" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/ha5gb-tYtf4" title="Feat Couch video 3" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/TZMJy-KAOnM" title="Feat Couch video 4" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/mM63VGueYBQ" title="Feat Couch video 5" allowfullscreen style="max-width:490px; max-height:280px;"></iframe>
-    </div>
-  </section>
 </main>
-<footer>
-  <p><strong>Get early access to new songs, tour dates, and Couch exclusives.</strong></p>
-  <a href="/contact" class="signup-btn">Sign Up</a>
-  <p>© 2025 Couch Productions LLC</p>
-  <nav class="social-icons" aria-label="Social media links">
-    <a href="https://open.spotify.com/artist/3nYyLjhw4mYzYfJePsCJYJ?si=hGlKsNmlQMKOBAqMr3NdQQ&amp;nd=1" target="_blank" rel="noopener" aria-label="Spotify">
-      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#spotify-unauth-icon"></use></svg>
-    </a>
-    <a href="https://music.apple.com/ca/artist/couch/1455880800" target="_blank" rel="noopener" aria-label="iTunes Store">
-      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#itunes-icon"></use></svg>
-    </a>
-    <a href="https://www.youtube.com/channel/UCYOcJ00IMsyv_h9SFtA9EJg" target="_blank" rel="noopener" aria-label="YouTube">
-      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#youtube-unauth-icon"></use></svg>
-    </a>
-    <a href="https://www.instagram.com/couch.theband/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
-      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#instagram-unauth-icon"></use></svg>
-    </a>
-    <a href="https://www.tiktok.com/@couch.theband?language=en" target="_blank" rel="noopener" aria-label="TikTok">
-      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#tiktok-unauth-icon"></use></svg>
-    </a>
-    <a href="https://www.facebook.com/couchtheband/" target="_blank" rel="noopener" aria-label="Facebook">
-      <svg viewBox="23 23 64 64" aria-hidden="true" focusable="false"><use xlink:href="#facebook-unauth-icon"></use></svg>
-    </a>
-  </nav>
-</footer>
+  <!-- Placeholder footer that will be populated with the HTML from "global-html/footer.html" due to our fragment loader -->
+<div id="footer-placeholder"></div>
 
 <!-- Social icons SVG symbols -->
 <svg style="display:none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" >
@@ -288,5 +159,7 @@
   <symbol id="tiktok-unauth-icon" viewBox="0 0 64 64"><path d="M37.9281 17C38.4298 21.2545 40.825 23.7941 45 24.0658V28.8451C42.5859 29.0794 40.4652 28.3016 38.0038 26.821V35.7423C38.0038 47.147 25.4788 50.7361 20.4233 42.5457C17.1856 37.3073 19.1642 28.1048 29.5496 27.73V32.781C28.7296 32.9058 27.9219 33.1002 27.1355 33.362C24.835 34.1398 23.5191 35.583 23.8883 38.1413C24.5889 43.033 33.6584 44.4856 32.901 34.9176V17H37.9091H37.9281Z"></path></symbol>
   <symbol id="facebook-unauth-icon" viewBox="0 0 64 64"><path d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z"></path></symbol>
 </svg>
+<script src="/javascript/load-fragments.js"></script>
+<script src="/javascript/header.js"></script>
 </body>
 </html>

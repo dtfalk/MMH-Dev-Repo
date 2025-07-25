@@ -10,15 +10,15 @@ header {
 }
 
 .site-header {
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-    color: white;
-    padding: 1rem;
-    z-index: 1000;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000;
+  background-color: transparent;
+  color: white;
 }
 
 /* .site-header {
@@ -38,6 +38,7 @@ header {
 
 .menu-toggle{
     justify-content: flex-start;
+    justify-self: start;
     display: block;
     background: none;
     border: none;
@@ -54,6 +55,7 @@ header {
 
 
 .main-nav {
+  width: 100%;
   justify-self: start;
 }
 
@@ -64,6 +66,9 @@ header {
 .menu{
     list-style: none;
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
     flex-direction: column;
     z-index: 1000;
     background-color: black;
@@ -137,6 +142,12 @@ header {
   justify-content: center;
   display: block;
   margin-top: -1rem;
+  /* margin-left: -0.5rem; */
+}
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  /* margin-left: -10rem;  */
 }
 
 header nav a.active,
@@ -144,7 +155,7 @@ header nav a[aria-current="page"] {
   border-bottom: 2px solid #fff;
   padding-bottom: 2px;
 }
-@media (min-width: 767px) {
+@media (min-width: 1010px) {
     
     .site-header {
         flex-direction: row;

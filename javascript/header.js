@@ -25,13 +25,13 @@ function setCurrentNavLink() {
   });
 }
 function updateHeader() {
-  const currentPath = window.location.pathname;
   const header = document.querySelector('.site-header');
   if (!header) return;
 
-  const isHome = currentPath === '/' || currentPath.includes('index');
+  const currentPath = window.location.pathname;
 
-  if (isHome) {
+  if (currentPath === '/' || currentPath.includes('index')) {
+    // Home page logic
     const heroButtons = document.getElementById('hero-buttons');
     if (!heroButtons) return;
 
@@ -47,10 +47,41 @@ function updateHeader() {
     } else {
       header.classList.remove('solid');
     }
+
+  } else if (currentPath.includes('/about')) {
+    // Example logic for /about page
+    const aboutHeader = document.getElementById('about-header');
+    if (!aboutHeader) return;
+    
+    const headingTop = aboutHeader.getBoundingClientRect().top;
+    const remInPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const triggerPoint = aboutHeader.offsetHeight + 3 * remInPx; // adjust this for when you want the header to turn solid
+
+    if (headingTop < triggerPoint) {
+      header.classList.add('solid');
+    } else {
+      header.classList.remove('solid');
+    }
+
+  } else if (currentPath.includes('tour')) {
+    const tourHeading = document.getElementById('upcoming-shows-title');
+    if (!tourHeading) return;
+
+    const headingTop = tourHeading.getBoundingClientRect().top;
+    const triggerPoint = 60; // adjust this for when you want the header to turn solid
+
+    if (headingTop < triggerPoint) {
+      header.classList.add('solid');
+    } else {
+      header.classList.remove('solid');
+    }
+
   } else {
+    // Default: solid header always
     header.classList.add('solid');
   }
 }
+
 
 function waitForHeaderAndRun() {
   const headerCheck = setInterval(() => {
@@ -63,10 +94,9 @@ function waitForHeaderAndRun() {
       setCurrentNavLink();
 
       const isHome = window.location.pathname === '/' || window.location.pathname.includes('index');
-      if (isHome) {
-        window.addEventListener('scroll', updateHeader);
-        window.addEventListener('load', updateHeader);
-      }
+      window.addEventListener('scroll', updateHeader);
+      window.addEventListener('load', updateHeader);
+      
     }
   }, 50);
 }

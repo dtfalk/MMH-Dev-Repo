@@ -2,28 +2,37 @@
 <html lang="en-US">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MUSIC — Couch</title>
-  <link rel="icon" type="image/x-icon" href="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/dc761829-6334-4e5b-a982-2f090b44ec28/favicon.ico?format=100w" />
-  <link rel="canonical" href="https://www.couchtheband.com/music" />
-  <meta name="description" content='Listen to Couch. "Sunshower - EP " Out Now!' />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Mom Is Here</title>
+<link rel="icon" href="/media-content/logo-2.png" />
+<meta name="description" content="Official website of My Mom Is Here with tour dates, music, and more!" />
+<meta property="og:title" content="My Mom is Here" />
+<meta property="og:description" content="Official website of My Mom Is Here with tour dates, music, and more!" />
+<meta property="og:image" content="/media-content/background-image2.jpg" />
+<meta property="og:url" content="https://www.mymomishere.com" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="My Mom is Here" />
+<meta name="twitter:description" content="Official website of My Mom Is Here with tour dates, music, and more!" />
+<meta name="twitter:image" content="/media-content/background-image2.jpg" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="/css/header.css">
+<link rel="stylesheet" href="/css/footer.css">
   <style>
     /* Reset and base */
     *, *::before, *::after {
       box-sizing: border-box;
     }
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: url('https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/dc315816-0c7f-4c4a-be1f-1442ef447b8c/4x5+press.jpg') center/cover no-repeat fixed;
-      color: white;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background-color: #b38b89;
-    }
+  body {
+    margin: 0; 
+    font-family: 'Poppins', sans-serif; 
+    color: white;
+    scroll-behavior: smooth; 
+    min-height: 100%;
+    background-image: url('/media-content/music.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
     a {
       color: inherit;
       text-decoration: none;
@@ -51,66 +60,14 @@
       max-width: 1200px;
       margin: 2rem auto 0;
       background: rgba(0,0,0,0.65);
-      padding: 2rem 1rem 4rem;
+      padding: 4rem 1rem 4rem;
+      padding-top: 6rem;
       border-radius: 4px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-    /* Navigation */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      background: rgba(0,0,0,0.5);
-      z-index: 100;
-    }
-    nav {
-      display: flex;
-      gap: 1.5rem;
-      font-weight: 500;
-      font-size: 0.9rem;
-    }
-    nav a {
-      color: white;
-      padding: 0.25rem 0;
-      position: relative;
-    }
-    nav a[aria-current="page"]::after {
-      content: "";
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: white;
-      border-radius: 2px;
-    }
-    .logo img {
-      height: 40px;
-      width: auto;
-      display: block;
-    }
-    /* Social icons container */
-    .social-icons {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-    }
-    .social-icons a svg {
-      width: 24px;
-      height: 24px;
-      fill: white;
-      transition: fill 0.3s ease;
-    }
-    .social-icons a:hover svg,
-    .social-icons a:focus svg {
-      fill: #c94f4f;
-      outline: none;
-    }
+  
     /* Music platforms grid */
     .platforms {
       display: grid;
@@ -152,19 +109,6 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.5);
       background: #121212;
     }
-    /* Footer */
-    footer {
-      background: #fff;
-      color: #a94444;
-      text-align: center;
-      padding: 1rem 1rem 3rem;
-      font-weight: 600;
-      font-size: 0.9rem;
-      font-family: 'Poppins', sans-serif;
-    }
-    footer p {
-      margin: 0.5rem 0 1rem;
-    }
     .signup-btn {
       background: #c94f4f;
       color: white;
@@ -185,13 +129,7 @@
       outline: none;
     }
     /* Responsive */
-    @media (max-width: 767px) {
-      header {
-        padding: 1rem;
-      }
-      nav {
-        display: none;
-      }
+    @media (max-width: 1010px) {
       .platforms {
         grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
         gap: 1rem 1.5rem;
@@ -228,112 +166,43 @@
   </svg>
 </head>
 <body>
-  <header>
-    <nav aria-label="Primary navigation">
-      <a href="/" >Home</a>
-      <a href="/about">About</a>
-      <a href="/tour">Tour</a>
-      <a href="/music" aria-current="page">Music</a>
-      <a href="/videos">Videos</a>
-      <a href="https://couchtheband.myshopify.com" target="_blank" rel="noopener">Merch</a>
-      <a href="/contact">Contact</a>
-    </nav>
-    <a href="/" class="logo" aria-label="Couch homepage">
-      <img src="//images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/86b34548-72f2-4a67-aae6-66ccc494b4e2/PNG_white_COUCH+1.png?format=1500w" alt="Couch" loading="eager" decoding="async" />
-    </a>
-    <div class="social-icons" aria-label="Social media links">
-      <a href="https://open.spotify.com/artist/3nYyLjhw4mYzYfJePsCJYJ?si=hGlKsNmlQMKOBAqMr3NdQQ&amp;nd=1" target="_blank" rel="noopener" aria-label="Spotify">
-        <svg><use xlink:href="#spotify-unauth-icon"></use></svg>
-      </a>
-      <a href="https://music.apple.com/ca/artist/couch/1455880800" target="_blank" rel="noopener" aria-label="iTunes Store">
-        <svg><use xlink:href="#itunes-icon"></use></svg>
-      </a>
-      <a href="https://www.youtube.com/channel/UCYOcJ00IMsyv_h9SFtA9EJg" target="_blank" rel="noopener" aria-label="YouTube">
-        <svg><use xlink:href="#youtube-unauth-icon"></use></svg>
-      </a>
-      <a href="https://www.instagram.com/couch.theband/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg><use xlink:href="#instagram-unauth-icon"></use></svg>
-      </a>
-      <a href="https://www.tiktok.com/@couch.theband?language=en" target="_blank" rel="noopener" aria-label="TikTok">
-        <svg><use xlink:href="#tiktok-unauth-icon"></use></svg>
-      </a>
-      <a href="https://www.facebook.com/couchtheband/" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg><use xlink:href="#facebook-unauth-icon"></use></svg>
-      </a>
-    </div>
-  </header>
+  <!-- Placeholder header that will be populated with the HTML from "global-html/header.html" due to our fragment loader -->
+<div id="header-placeholder"></div>
 
   <main>
     <h2>MUSIC</h2>
     <section class="platforms" aria-label="Music platforms">
-      <a href="https://open.spotify.com/artist/3nYyLjhw4mYzYfJePsCJYJ?si=hGlKsNmlQMKOBAqMr3NdQQ" target="_blank" rel="noopener" aria-label="Spotify">
+      <a href="https://open.spotify.com/artist/3f9p52DC2u7WN61lNNc18D" target="_blank" rel="noopener" aria-label="Spotify">
         <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/a582278a-0336-4f48-b804-9df44a070211/Spotify_Logo_RGB_White.png" alt="Spotify logo" loading="lazy" decoding="async" />
       </a>
-      <a href="https://music.apple.com/us/artist/couch/1455880800" target="_blank" rel="noopener" aria-label="Apple Music">
+      <a href="https://music.apple.com/us/artist/my-mom-is-here/1748184457" target="_blank" rel="noopener" aria-label="Apple Music">
         <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/64a11ba9-49df-49d0-ae8c-8418322fec31/Apple-Music-Logo_CROPPED.png" alt="Apple Music logo" loading="lazy" decoding="async" />
       </a>
-      <a href="https://music.youtube.com/channel/UCJkksEaCKsAx6LEAbTQKe8A" target="_blank" rel="noopener" aria-label="YouTube Music">
+      <a href="https://music.youtube.com/channel/UCQDilxdbmlhAOYe_NfvgTow" target="_blank" rel="noopener" aria-label="YouTube Music">
         <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/270389c7-f552-48fc-b888-e8febe06979e/Youtube-Music-Logo-1.png" alt="YouTube Music logo" loading="lazy" decoding="async" />
       </a>
-      <a href="https://www.amazon.com/music/player/artists/B093MRBNBG/couch" target="_blank" rel="noopener" aria-label="Amazon Music">
+      <a href="https://www.amazon.com/music/player/artists/B0D55SYCYC/my-mom-is-here" target="_blank" rel="noopener" aria-label="Amazon Music">
         <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/60d996c2-903f-45dd-a83b-0f1de373fca4/AmazonMusicLogo-1.png" alt="Amazon Music logo" loading="lazy" decoding="async" />
       </a>
-      <a href="https://www.deezer.com/us/artist/75914" target="_blank" rel="noopener" aria-label="Deezer">
+      <a href="https://www.deezer.com/en/artist/267180682/biography" target="_blank" rel="noopener" aria-label="Deezer">
         <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/a89b1c26-3552-4cad-a878-4676c1b0563d/DeezerMusicIcon_WIDE-1.png" alt="Deezer logo" loading="lazy" decoding="async" />
       </a>
-      <a href="https://tidal.com/browse/artist/3575033" target="_blank" rel="noopener" aria-label="Tidal">
+      <a href="https://tidal.com/browse/artist/48022361" target="_blank" rel="noopener" aria-label="Tidal">
         <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/48f1c8f1-16e7-4455-8f97-da3110413644/TidalIcon_WIDE+%281%29.png" alt="Tidal logo" loading="lazy" decoding="async" />
       </a>
     </section>
 
     <h3>STUDIO RELEASES</h3>
     <section class="spotify-embeds" aria-label="Studio releases Spotify embeds">
-      <iframe src="https://open.spotify.com/embed/album/2PTov9H59TMyFQbCBuL4eQ?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Sunshower Album"></iframe>
-      <iframe src="https://open.spotify.com/embed/album/6xECuZMVGYYJN47ZvyJ9c8?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Saturday Album"></iframe>
-    </section>
-
-    <h3>LIVE RELEASES</h3>
-    <section class="spotify-embeds" aria-label="Live releases Spotify embeds">
-      <iframe src="https://open.spotify.com/embed/album/1hfbWeEK7tSRAUZCobGI84?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Live Release 1"></iframe>
-      <iframe src="https://open.spotify.com/embed/album/41QQhJ3HF5OT50b5MP9BgJ?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Live Release 2"></iframe>
-      <iframe src="https://open.spotify.com/embed/album/5uHZZqP0N15zURyP7bgLIt?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Live Release 3"></iframe>
-    </section>
-
-    <h3>BUY COUCH’S MUSIC</h3>
-    <section class="platforms" aria-label="Buy Couch's music platforms">
-      <a href="https://music.apple.com/us/artist/couch/1455880800" target="_blank" rel="noopener" aria-label="iTunes">
-        <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/1718b759-400d-4516-8478-55b373d60b2d/Just+logo.png" alt="iTunes logo" loading="lazy" decoding="async" />
-      </a>
-      <a href="https://couchtheband.bandcamp.com" target="_blank" rel="noopener" aria-label="Bandcamp">
-        <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/df796c20-75c8-42ea-95b4-d4af786c51fe/%2338b6cd+%281%29.png" alt="Bandcamp logo" loading="lazy" decoding="async" />
-      </a>
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/15j0lU4L9KfYkpLJMLu13a?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/70al7FyjDdYLd1ysSJ9b73?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4JNflLn59Bp5ecVQ7GApRv?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5e13gmcTSdgP0wXkPV6DCi?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </section>
   </main>
-
-  <footer>
-    <p>Get early access to new songs, tour dates, and Couch exclusives.</p>
-    <a href="/contact" class="signup-btn">Sign Up</a>
-    <div class="social-icons" aria-label="Social media links">
-      <a href="https://open.spotify.com/artist/3nYyLjhw4mYzYfJePsCJYJ?si=hGlKsNmlQMKOBAqMr3NdQQ&amp;nd=1" target="_blank" rel="noopener" aria-label="Spotify">
-        <svg><use xlink:href="#spotify-unauth-icon"></use></svg>
-      </a>
-      <a href="https://music.apple.com/ca/artist/couch/1455880800" target="_blank" rel="noopener" aria-label="iTunes Store">
-        <svg><use xlink:href="#itunes-icon"></use></svg>
-      </a>
-      <a href="https://www.youtube.com/channel/UCYOcJ00IMsyv_h9SFtA9EJg" target="_blank" rel="noopener" aria-label="YouTube">
-        <svg><use xlink:href="#youtube-unauth-icon"></use></svg>
-      </a>
-      <a href="https://www.instagram.com/couch.theband/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg><use xlink:href="#instagram-unauth-icon"></use></svg>
-      </a>
-      <a href="https://www.tiktok.com/@couch.theband?language=en" target="_blank" rel="noopener" aria-label="TikTok">
-        <svg><use xlink:href="#tiktok-unauth-icon"></use></svg>
-      </a>
-      <a href="https://www.facebook.com/couchtheband/" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg><use xlink:href="#facebook-unauth-icon"></use></svg>
-      </a>
-    </div>
-    <p>© 2025 Couch Productions LLC</p>
-  </footer>
+<!-- Placeholder footer that will be populated with the HTML from "global-html/footer.html" due to our fragment loader -->
+<div id="footer-placeholder"></div>
+<script src="/javascript/load-fragments.js"></script>
+<script src="/javascript/header.js"></script>
 </body>
 </html>
