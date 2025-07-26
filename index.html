@@ -4,17 +4,19 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>My Mom Is Here</title>
-<link rel="icon" href="./media-content/logo.png" />
+<link rel="icon" href="/media-content/logo-2.png" />
 <meta name="description" content="Official website of My Mom Is Here with tour dates, music, and more!" />
 <meta property="og:title" content="My Mom is Here" />
 <meta property="og:description" content="Official website of My Mom Is Here with tour dates, music, and more!" />
-<meta property="og:image" content="./media-content/background-image2.jpg" />
+<meta property="og:image" content="/media-content/background-image2.jpg" />
 <meta property="og:url" content="https://www.mymomishere.com" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="My Mom is Here" />
 <meta name="twitter:description" content="Official website of My Mom Is Here with tour dates, music, and more!" />
-<meta name="twitter:image" content="./media-content/background-image2.jpg" />
+<meta name="twitter:image" content="/media-content/background-image2.jpg" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="/css/header.css">
+<link rel="stylesheet" href="/css/footer.css">
 <style>
   /* Reset and base */
   *, *::before, *::after {
@@ -26,98 +28,43 @@
     color: #000;
     scroll-behavior: smooth; 
     min-height: 100%;
-    background-image: url('./media-content/background-image2.jpg');
+    background-image: url('/media-content/background-image2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
+  .body-wrapper {
+    background: rgba(0,0,0,0.6);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem;
+  }
   a {
     color: inherit; text-decoration: none;
-  }
-  img {
-    max-width: 100%; height: auto; display: block;
   }
   h2 {
     margin: 0 0 1rem; 
     font-weight: 700; 
+    font-size: xx-large;
     text-align: center; 
     text-transform: uppercase; 
-    color: #fff;
+    color: white;
     padding-top: 4rem;
   }
+
   strong {
     font-weight: 700;
   }
   
   /* Container */
   .container {
-    max-width: 1200px; 
-    margin: 0 auto;
-    padding: 0 1rem; 
-  }
-  /* Header */
-  header {
-    top: 0; left: 0; 
-    right: 0; 
-    z-index: 1000;
-    background: transparent; 
-    align-items: center;
-    padding: 1rem 0; 
-    font-weight: 500; 
-    letter-spacing: 0.05em;
-  }
-  .site-header{
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-    color: white;
-    padding: 1rem;
-    z-index: 1000;
-  }
-  .site-header.solid {
-    background-color: rgba(0, 0, 0, 0.9);
-    transition: background-color 0.3s ease;
-  }
-  
-  .main-nav{
-    display: none;
     width: 100%;
-  }
-  .main-nav.active{
-    display: block;
-  }
-
-  .menu{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    z-index: 1000;
-    background-color: black;
+    margin: 0 auto; 
+    padding: 0 1rem;
   }
 
-  .menu li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  .menu li a:hover{
-    text-decoration: underline;
-  }
-
-  .menu-toggle{
-    justify-content: flex-end;
-    display: block;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.4rem;
-    cursor: pointer;
-    z-index: 9999;
-  }
   nav a {
     color: #fff; 
     opacity: 0.8; 
@@ -126,39 +73,12 @@
   nav a:hover, nav a[aria-current="page"] {
     opacity: 1;
   }
-  .logo {
-    position: relative; 
-    height: 10px;
-    align-items: center; 
-  }
-  /* Social icons container */
-  .social-icons {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 0.75rem;
-    padding: 0;
-    height: auto;
-  }
-  .social-icons a svg {
-    width: 2rem;
-    height: 2rem;
-    display: block;
-  }
-  .social-icons a {
-    width: 2rem; 
-    height: 2rem; 
-    fill: #fff; 
-    transition: opacity 0.3s ease;
-  }
-  .social-icons a:hover {
-    opacity: 1;
-  }
+  
   /* Hero Section */
   .hero {
     position: relative; 
     height: 100vh;
-    background: url('./media-content/backup-background.jpg') center/cover no-repeat;
+    background: url('/media-content/backup-background.jpg') center/cover no-repeat;
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
@@ -210,26 +130,12 @@
   /* Upcoming Shows Section */
   .shows-section {
     background: transparent;
-    padding: 2rem 1rem 6rem;
+    padding: 0 1rem 1rem;
     text-align: center;
     color: #fff;
     position: relative;
     z-index: 1;
     overflow: hidden;
-  }
-    .shows-section::before {
-    content: "";
-    position: absolute;
-    background: rgba(0,0,0,0.5);
-    width: 90%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 0;
-    height: 90%;
-  }
-  .shows-section >*{
-    position: relative;
-    z-index: 1;
   }
   .shows-images {
     display: flex; 
@@ -239,7 +145,10 @@
     margin: 2rem 0 2rem;
   }
   .shows-images a {
-    flex: 1 1 280px; max-width: 320px; background: #fff; padding: 0.5rem;
+    flex: 1 1 280px;
+    max-width: 400px; 
+    background: #fff; 
+    padding: 0.5rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.15);
     border-radius: 4px;
   }
@@ -274,46 +183,44 @@
   }
   .merch-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 2fr);
+    grid-template-columns: repeat(auto-fit,2fr);
     gap: 1.5rem;
     justify-items: center;
     margin: 2rem 2rem 2rem;
   }
   .merch-item {
-    background: #65c4ff;
+    background: white;
     padding: 1rem;
     border-radius: 8px;
-    max-width: 160px;
+    max-width: 2000px;
   }
   .merch-item img {
-    width: 100%; height: auto; display: block;
+    width: 100%; 
+    height: auto; 
+    display: block;
   }
   /* Shop Now Button */
   .shop-btn {
     margin: 1rem auto 0;
   }
-  /* Sweater Sessions Section */
-  .sweater-section {
+  /* Music Videos Section */
+  .mv-section {
     position: relative;
     background: transparent;
-    padding: 0 1rem 2rem;
+    padding: 0 1rem 1rem;
     color: #fff;
     text-align: center;
     z-index: 1;
     overflow: hidden;
   }
-  .sweater-section::before {
+  /* .sweater-section::before {
     content: "";
     position: absolute;
     background: rgba(0,0,0,0.5);
     z-index: 0;
-    width: 90%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .sweater-section > * {
-    position: relative; 
-    z-index: 1;
+  } */
+  .mv-section > * {
+    position: relative; z-index: 1;
   }
   .video-thumbnails{
     display: flex;
@@ -327,13 +234,14 @@
   .video-thumbnails a {
     display: block;
     width: 100%;
-    max-width: 320px;
+    max-width: 400px;
     transition: transform 0.3s ease;
   }
   .video-thumbnails img {
     width: 100%;
     height: auto;
     border-radius: 12px;
+    max-width: 400px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, 
     box-shadow 0.3s ease;
@@ -347,71 +255,16 @@
   .listen-btn {
     margin: 1.5rem auto 0;
   }
-  /* Footer Section */
-  footer {
-    background: #f7e821;
-    padding: 2rem 1rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #cf1e14;
-  }
-  footer p {
-    margin: 0 0 1rem;
-    font-weight: 700;
-  }
-  footer .btn-secondary {
-    background-color: #65c4ff; color: #fff; border: none; border-radius: 9999px;
-    padding: 0.75rem 2.5rem; font-weight: 700; font-size: 1rem; cursor: pointer;
-    text-transform: uppercase; letter-spacing: 0.1em;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-    margin-bottom: 1rem;
-  }
-  footer .btn-secondary:hover {
-    background-color: #9c3f3b;
-  }
-  footer .social-icons-footer {
-    display: flex; 
-    justify-content: center; 
-    gap: 1rem; 
-    margin-top: 0.5rem;
-  }
-  footer .social-icons-footer a {
-    width: 24px; 
-    height: 24px; 
-    fill: #b94f4a; 
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-  }
-  footer .social-icons-footer a:hover {
-    opacity: 1;
-  }
   /* Responsive */
-  @media (min-width: 767px) {
-    
-    .site-header {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .main-nav{
-      display: block !important;
-     }
-    .menu{
-      flex-direction: row;
-      gap: 20px;
-      background-color: transparent;
-    }
-    .menu-toggle{
-      display: none;
-      z-index: 9999;
-    }
-    .logo {
-      position: static; 
-      transform: none; 
-      margin: 0 auto 1rem;
-      height: 10px;
-    }
+  @media (min-width: 1010px) {
+     .body-wrapper {
+    background: rgba(0,0,0,0.4);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 2rem;
+    text-align: center;
+    margin: 3.5rem;
+  }
     .hero {
       position: relative;
       height: 65vh; /* or 500px — change as needed */
@@ -436,7 +289,7 @@
       flex-direction: row;
       gap: 1rem;
     }
-    .sweater-section {
+    .mv-section {
       padding: 4rem 1rem 4rem;
     }
     .video-thumbnails{
@@ -453,143 +306,104 @@
       grid-template-columns: repeat(3, 2fr);
       gap: 1rem;
     }
+    .merch-item {
+      max-width: 250px;
+    }
   }
 </style>
 </head>
 <body>
-<header class="site-header">
-  <button type="button" class="menu-toggle" aria-label="Toggle menu">
-    <i class="fas fa-bars"></i>
-  </button>
-  <nav class="main-nav" aria-label="Primary navigation">
-    <ul class="menu">
-      <li><a href="/" aria-current="page">Home</a></li>
-      <li><a href="couchdupe.html">About</a></li>
-      <li><a href="tour.html">Tour</a></li>
-      <li><a href="music.html">Music</a></li>
-      <li><a href="videos.html">Videos</a></li>
-      <li><a href="https://couchtheband.myshopify.com" target="_blank" rel="noopener noreferrer">Merch</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
 
-  <a href="/" class="logo" aria-label="MMIH Home">
-      <img src="">
-     </a>
+  <!-- Placeholder header that will be populated with the HTML from "global-html/header.html" due to our fragment loader -->
+  <div id="header-placeholder"></div>
 
-  <div class="social-icons" aria-label="Social media links">
-    <a href="https://open.spotify.com/track/70al7FyjDdYLd1ysSJ9b73?si=268c569814114fc5" target="_blank" rel="noopener" aria-label="Spotify">
-      <svg viewBox="0 0 64 64" fill="currentColor"><use xlink:href="#spotify-unauth-icon"></use></svg>
-    </a>
-    <a href="https://music.apple.com/us/album/didnt-sleep-tonight/1748555657?i=1748555658" target="_blank" rel="noopener" aria-label="iTunes Store">
-      <svg viewBox="0 0 64 64" fill="currentColor"><use xlink:href="#itunes-icon"></use></svg>
-    </a>
-    <a href="https://www.youtube.com/channel/UC1OOPbAL4g_3s-rWgbJELPA" target="_blank" rel="noopener" aria-label="YouTube">
-      <svg viewBox="0 0 64 64" fill="currentColor"><use xlink:href="#youtube-unauth-icon"></use></svg>
-    </a>
-    <a href="https://www.instagram.com/my.mom.is.here/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
-      <svg viewBox="0 0 64 64" fill="currentColor"><use xlink:href="#instagram-unauth-icon"></use></svg>
-    </a>
-    <a href="https://www.tiktok.com/@mymom.ishere" target="_blank" rel="noopener" aria-label="TikTok">
-      <svg viewBox="0 0 64 64" fill="currentColor"><use xlink:href="#tiktok-unauth-icon"></use></svg>
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=61560937711302" target="_blank" rel="noopener" aria-label="Facebook">
-      <svg viewBox="0 0 64 64" fill="currentColor"><use xlink:href="#facebook-unauth-icon"></use></svg>
-    </a>
-</div>
-</header>
 
-<main>
-  <section class="hero" aria-label="Hero section with band photo and main navigation buttons">
-    <video autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;">
-      <source src="./media-content/loop-video.mp4" type="video/mp4" />
+  <main>
+   <section class="hero" aria-label="Hero section with band photo and main navigation buttons">
+    <img
+      id="hero-fallback"
+      src="/media-content/backup-background.jpg"
+      alt="Background fallback"
+      style="display:none;position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;"
+    />
+
+    <video
+      id="hero-video"
+      autoplay
+      muted
+      playsinline
+      loop
+      preload="auto"
+      aria-hidden="true"
+      tabindex="-1"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:1;"
+    >
+      <source src="/media-content/loop-video.mp4" type="video/mp4" />
     </video>
     <h2 class="title">MY MOM IS HERE</h2>
-    <div class="hero-buttons" id = "hero-buttons">
+    <div class="hero-buttons" id="hero-buttons">
       <a href="tour.html" class="btn-primary" role="button">SHOWS</a>
       <a href="music.html" class="btn-primary" role="button">MUSIC</a>
       <a href="https://couchtheband.myshopify.com" class="btn-primary" role="button" target="_blank" rel="noopener">MERCH</a>
     </div>
   </section>
+  <div class="body-wrapper">
+    <div class="background"></div>
+    <section class="shows-section" aria-labelledby="upcoming-shows-title">
+      <h2 id="upcoming-shows-title">UPCOMING SHOWS</h2>
+      <div class="shows-images">
+        <a href="/tour.html" aria-label="View all upcoming show tickets">
+          <img src="/media-content/tour-poster.jpg" alt="Upcoming shows poster"/>
+        </a>
+      </div>
+      <a href="/tour.html" class="btn-primary tickets-btn" role="button">TICKETS</a>
+    </section>
 
-  <div class="background"></div>
-  <section class="shows-section" aria-labelledby="upcoming-shows-title">
-    <h2 id="upcoming-shows-title">UPCOMING SHOWS</h2>
-    <div class="shows-images">
-      <a href="/tickets" aria-label="View all upcoming show tickets">
-        <img src="./media-content/tour-poster.jpg" alt="Upcoming shows poster"/>
+    <section class="mv-section" aria-labelledby="mv-title">
+      <h2 id="mv-title">MUSIC VIDEOS</h2>
+      <div class="video-thumbnails">
+      <a href="https://www.youtube.com/watch?v=UWZgF8JRni4&list=RDUWZgF8JRni4&start_radio=1" target="_blank">
+        <img src="https://img.youtube.com/vi/UWZgF8JRni4/hqdefault.jpg" alt="Watch on YouTube">
       </a>
+      <a href="https://www.youtube.com/watch?v=l_4Wr4e9Tts" target="_blank">
+        <img src="https://img.youtube.com/vi/l_4Wr4e9Tts/hqdefault.jpg" alt="Watch on YouTube">
+      </a>
+      <a href="https://www.youtube.com/watch?v=fenM8Hr4OIM" target="_blank">
+        <img src="https://img.youtube.com/vi/fenM8Hr4OIM/hqdefault.jpg" alt="Watch on YouTube">
+      </a>
+      </div>
+      <a href="music.html" class="btn-primary listen-btn" role="button" target="_blank" rel="noopener">LISTEN</a>
+    </section>
+
+    <section class="merch-section" aria-labelledby="merch-title">
+      <h2 id="merch-title">MERCH</h2>
+      <div class="merch-grid">
+        <a href="https://couchtheband.myshopify.com" class="merch-item" target="_blank" rel="noopener" aria-label="Blue T-shirt">
+          <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/055ba33b-e6df-45b6-b61d-8ab94f0e445f/Couch+Live+Flo+Blue+T-Shirt+%28Lighter+Pink+Back%29.png" alt="Blue T-shirt" loading="lazy" decoding="async" />
+        </a>
+        <a href="https://couchtheband.myshopify.com" class="merch-item" target="_blank" rel="noopener" aria-label="Black Sweatshirt">
+          <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/cfc345dd-bb2c-48a7-a8f9-0b6fdddca693/Blue+Hoodie+%28Lighter+Pink+Back%29.png" alt="Black Sweatshirt" loading="lazy" decoding="async" />
+        </a>
+        <a href="https://couchtheband.myshopify.com" class="merch-item" target="_blank" rel="noopener" aria-label="Blue Hoodie">
+          <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/1e410b4c-7cef-499d-ac08-042506ffebe5/Couch+Live+Ivory+T-Shirt+%28Lighter+Pink+Back%29.png" alt="Blue Hoodie" loading="lazy" decoding="async" />
+        </a>
+        <a href="https://couchtheband.myshopify.com" class="merch-item" target="_blank" rel="noopener" aria-label="Maroon Hat">
+          <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/845e37b7-0d36-4b35-9a02-6bae010e16af/Maroon+Hat+%28Lighter+Pink+Back%29.png" alt="Maroon Hat" loading="lazy" decoding="async" />
+        </a>
+        <a href="https://couchtheband.myshopify.com" class="merch-item" target="_blank" rel="noopener" aria-label="White T-shirt">
+          <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/055ba33b-e6df-45b6-b61d-8ab94f0e445f/Couch+Live+Flo+Blue+T-Shirt+%28Lighter+Pink+Back%29.png" alt="White T-shirt" loading="lazy" decoding="async" />
+        </a>
+        <a href="https://couchtheband.myshopify.com" class="merch-item" target="_blank" rel="noopener" aria-label="Couch Sticker">
+          <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/3b408547-5c35-4322-8f02-3fe6a4c114f3/Couch+on+a+Couch+Sticker+%28Lighter+Pink+Back%29.png" alt="Couch Sticker" loading="lazy" decoding="async" />
+        </a>
+      </div>
+      <a href="https://couchtheband.myshopify.com" class="btn-primary shop-btn" role="button" target="_blank" rel="noopener">SHOP NOW</a>
+    </section>
     </div>
-    <a href="/tour" class="btn-primary tickets-btn" role="button">TICKETS</a>
-  </section>
+  </main>
 
-  <section class="sweater-section" aria-labelledby="sweater-sessions-title">
-    <h2 id="sweater-sessions-title">MUSIC VIDEOS</h2>
-    <div class="video-thumbnails">
-    <a href="https://www.youtube.com/watch?v=UWZgF8JRni4&list=RDUWZgF8JRni4&start_radio=1" target="_blank">
-      <img src="https://img.youtube.com/vi/UWZgF8JRni4/hqdefault.jpg" alt="Watch on YouTube">
-    </a>
-    <a href="https://www.youtube.com/watch?v=l_4Wr4e9Tts" target="_blank">
-      <img src="https://img.youtube.com/vi/l_4Wr4e9Tts/hqdefault.jpg" alt="Watch on YouTube">
-    </a>
-    <a href="https://www.youtube.com/watch?v=fenM8Hr4OIM" target="_blank">
-      <img src="https://img.youtube.com/vi/fenM8Hr4OIM/hqdefault.jpg" alt="Watch on YouTube">
-    </a>
-    </div>
-    <a href="https://stem.ffm.to/thesweatersessionsii" class="btn-primary listen-btn" role="button" target="_blank" rel="noopener">LISTEN</a>
-  </section>
-
-  <section class="merch-section" aria-labelledby="merch-title">
-    <h2 id="merch-title">MERCH</h2>
-    <div class="merch-grid">
-      <a href="https://couchtheband.myshopify.com" class="merch-item" target="_blank" rel="noopener" aria-label="Blue T-shirt">
-        <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/055ba33b-e6df-45b6-b61d-8ab94f0e445f/Couch+Live+Flo+Blue+T-Shirt+%28Lighter+Pink+Back%29.png" alt="Blue T-shirt" loading="lazy" decoding="async" />
-      </a>
-      <a href="https://couchtheband.myshopify.com" class="merch-item" target="_blank" rel="noopener" aria-label="Black Sweatshirt">
-        <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/cfc345dd-bb2c-48a7-a8f9-0b6fdddca693/Blue+Hoodie+%28Lighter+Pink+Back%29.png" alt="Black Sweatshirt" loading="lazy" decoding="async" />
-      </a>
-      <a href="https://couchtheband.myshopify.com" class="merch-item" target="_blank" rel="noopener" aria-label="Blue Hoodie">
-        <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/1e410b4c-7cef-499d-ac08-042506ffebe5/Couch+Live+Ivory+T-Shirt+%28Lighter+Pink+Back%29.png" alt="Blue Hoodie" loading="lazy" decoding="async" />
-      </a>
-      <a href="https://couchtheband.myshopify.com" class="merch-item" target="_blank" rel="noopener" aria-label="Maroon Hat">
-        <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/845e37b7-0d36-4b35-9a02-6bae010e16af/Maroon+Hat+%28Lighter+Pink+Back%29.png" alt="Maroon Hat" loading="lazy" decoding="async" />
-      </a>
-      <a href="https://couchtheband.myshopify.com" class="merch-item" target="_blank" rel="noopener" aria-label="White T-shirt">
-        <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/055ba33b-e6df-45b6-b61d-8ab94f0e445f/Couch+Live+Flo+Blue+T-Shirt+%28Lighter+Pink+Back%29.png" alt="White T-shirt" loading="lazy" decoding="async" />
-      </a>
-      <a href="https://couchtheband.myshopify.com" class="merch-item" target="_blank" rel="noopener" aria-label="Couch Sticker">
-        <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/3b408547-5c35-4322-8f02-3fe6a4c114f3/Couch+on+a+Couch+Sticker+%28Lighter+Pink+Back%29.png" alt="Couch Sticker" loading="lazy" decoding="async" />
-      </a>
-    </div>
-    <a href="https://couchtheband.myshopify.com" class="btn-primary shop-btn" role="button" target="_blank" rel="noopener">SHOP NOW</a>
-  </section>
-</main>
-
-<footer>
-  <p>Get early access to new songs, tour dates, and My Mom Is Here exclusives.</p>
-  <a href="/contact" class="btn-secondary" role="button">Sign Up</a>
-  <div class="social-icons-footer" aria-label="Social media links">
-    <a href="https://open.spotify.com/track/70al7FyjDdYLd1ysSJ9b73?si=268c569814114fc5" target="_blank" rel="noopener" aria-label="Spotify">
-      <svg viewBox="0 0 64 64" fill="currentColor"><use xlink:href="#spotify-unauth-icon"></use></svg>
-    </a>
-    <a href="https://music.apple.com/us/album/didnt-sleep-tonight/1748555657?i=1748555658" target="_blank" rel="noopener" aria-label="iTunes Store">
-      <svg viewBox="0 0 64 64" fill="currentColor"><use xlink:href="#itunes-icon"></use></svg>
-    </a>
-    <a href="https://www.youtube.com/channel/UC1OOPbAL4g_3s-rWgbJELPA" target="_blank" rel="noopener" aria-label="YouTube">
-      <svg viewBox="0 0 64 64" fill="currentColor"><use xlink:href="#youtube-unauth-icon"></use></svg>
-    </a>
-    <a href="https://www.instagram.com/my.mom.is.here/?hl=enn" target="_blank" rel="noopener" aria-label="Instagram">
-      <svg viewBox="0 0 64 64" fill="currentColor"><use xlink:href="#instagram-unauth-icon"></use></svg>
-    </a>
-    <a href="https://www.tiktok.com/@mymom.ishere" target="_blank" rel="noopener" aria-label="TikTok">
-      <svg viewBox="0 0 64 64" fill="currentColor"><use xlink:href="#tiktok-unauth-icon"></use></svg>
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=61560937711302" target="_blank" rel="noopener" aria-label="Facebook">
-      <svg viewBox="0 0 64 64" fill="currentColor"><use xlink:href="#facebook-unauth-icon"></use></svg>
-    </a>
-  </div>
-  <p>© My Mom Is Here (soon-to-be) LLC</p>
-</footer>
+  <!-- Placeholder footer that will be populated with the HTML from "global-html/footer.html" due to our fragment loader -->
+  <div id="footer-placeholder"></div>
 
 <!-- Social icons SVG symbols -->
 <svg style="display:none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -600,39 +414,33 @@
   <symbol id="tiktok-unauth-icon" viewBox="0 0 64 64"><path d="M37.9281 17C38.4298 21.2545 40.825 23.7941 45 24.0658V28.8451C42.5859 29.0794 40.4652 28.3016 38.0038 26.821V35.7423C38.0038 47.147 25.4788 50.7361 20.4233 42.5457C17.1856 37.3073 19.1642 28.1048 29.5496 27.73V32.781C28.7296 32.9058 27.9219 33.1002 27.1355 33.362C24.835 34.1398 23.5191 35.583 23.8883 38.1413C24.5889 43.033 33.6584 44.4856 32.901 34.9176V17H37.9091H37.9281Z"></path></symbol>
   <symbol id="facebook-unauth-icon" viewBox="0 0 64 64"><path d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z"></path></symbol>
 </svg>
+<script src="/javascript/load-fragments.js"></script>
+<script src="/javascript/header.js"></script>
 <script>
-  function updateHeader() {
-    const header = document.querySelector('.site-header');
-    const heroButtons = document.getElementById('hero-buttons');
+  const video = document.getElementById('hero-video');
+  const fallback = document.getElementById('hero-fallback');
 
-    const heroButtonsTop = heroButtons.getBoundingClientRect().top;
-    const paddingVH = 40;
-    const paddingPx = window.innerHeight * (paddingVH / 100);
-    const visibleButtonTop = heroButtonsTop + paddingPx;
+  function tryPlayVideo() {
+    if (!video || !fallback) return;
 
-    const headerHeight = header.offsetHeight;
-    const buffer = 20; // optional buffer above the header
-    const triggerPoint = headerHeight + buffer;
+    const playPromise = video.play();
 
-    if (visibleButtonTop <= triggerPoint) {
-      header.classList.add('solid');
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          fallback.style.display = 'none'; // video autoplay worked
+        })
+        .catch(() => {
+          video.style.display = 'none';    // fallback instead
+          fallback.style.display = 'block';
+        });
     } else {
-      header.classList.remove('solid');
+      video.style.display = 'none';
+      fallback.style.display = 'block';
     }
   }
 
-  window.addEventListener('scroll', updateHeader);
-  window.addEventListener('load', updateHeader);
+  window.addEventListener('load', tryPlayVideo);
 </script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const toggleBtn = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.main-nav');
-
-    toggleBtn.addEventListener('click', function () {
-      nav.classList.toggle('active');
-    });
-  });
-  </script>
 </body>
 </html>
