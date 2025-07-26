@@ -53,7 +53,16 @@ main {
     display: block;
   }
   main {
-    padding-top: 80px;
+    background: rgba(0,0,0,0.6);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 2rem;
+  }
+   .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
   }
   .hero {
     display: grid;
@@ -65,13 +74,7 @@ main {
     color: #fff;
     min-height: 600px;
   }
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
-    z-index: 0;
-  }
+ 
   .hero > * {
     position: relative;
     padding: 3rem 2rem;
