@@ -38,14 +38,22 @@
     max-width: 100%; height: auto; display: block;
   }
   h2 {
-    margin: 0 0 1rem; font-weight: 700; text-align: center; text-transform: uppercase; color: #fff;
+    margin: 0 0 1rem; 
+    font-weight: 700; 
+    text-align: center; 
+    text-transform: uppercase; 
+    color: #fff;
+    padding-top: 4rem;
   }
   strong {
     font-weight: 700;
   }
+  
   /* Container */
   .container {
-    max-width: 1200px; margin: 0 auto; padding: 0 1rem;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 1rem; 
   }
   /* Header */
   header {
@@ -168,6 +176,10 @@
     z-index: 0;
     object-position: center 0%;
   }
+  .title {
+    z-index: 1;
+    padding-top: 20vh;
+  }
   .hero-buttons {
     position: relative; 
     z-index: 1; 
@@ -177,7 +189,7 @@
     gap: 1.5rem; 
     flex-wrap: wrap; 
     justify-content: center;
-    padding-top: 40vh;
+    padding-top: 15vh;
   }
   .btn-primary {
     background-color: #65c4ff; 
@@ -193,19 +205,38 @@
     transition: background-color 0.3s ease;
   }
   .btn-primary:hover {
-    background-color: #9c3f3b;
+    background-color: #079cf9;
 }
   /* Upcoming Shows Section */
   .shows-section {
     background: transparent;
-    padding: 3rem 1rem 4rem;
+    padding: 2rem 1rem 6rem;
     text-align: center;
     color: #fff;
     position: relative;
     z-index: 1;
+    overflow: hidden;
+  }
+    .shows-section::before {
+    content: "";
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    height: 90%;
+  }
+  .shows-section >*{
+    position: relative;
+    z-index: 1;
   }
   .shows-images {
-    display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin: 2rem 0 1.5rem;
+    display: flex; 
+    justify-content: center; 
+    gap: 2rem; 
+    flex-wrap: wrap; 
+    margin: 2rem 0 2rem;
   }
   .shows-images a {
     flex: 1 1 280px; max-width: 320px; background: #fff; padding: 0.5rem;
@@ -221,20 +252,35 @@
   }
   /* Merch Section */
   .merch-section {
+    position: relative;
     background: transparent;
     padding: 3rem 1rem 4rem;
     color: #fff;
     text-align: center;
   }
+    .merch-section::before {
+    content: "";
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    z-index: 0;
+    height: 90%;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+  .merch-section >*{
+    position: relative;
+    z-index: 1;
+  }
   .merch-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+    grid-template-columns: repeat(auto-fit, 2fr);
     gap: 1.5rem;
     justify-items: center;
-    margin: 2rem 0 1.5rem;
+    margin: 2rem 2rem 2rem;
   }
   .merch-item {
-    background: #f4979d;
+    background: #65c4ff;
     padding: 1rem;
     border-radius: 8px;
     max-width: 160px;
@@ -250,18 +296,24 @@
   .sweater-section {
     position: relative;
     background: transparent;
-    padding: 6rem 1rem 6rem;
+    padding: 0 1rem 2rem;
     color: #fff;
     text-align: center;
+    z-index: 1;
+    overflow: hidden;
   }
   .sweater-section::before {
     content: "";
-    position: absolute; inset: 0;
+    position: absolute;
     background: rgba(0,0,0,0.5);
     z-index: 0;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .sweater-section > * {
-    position: relative; z-index: 1;
+    position: relative; 
+    z-index: 1;
   }
   .video-thumbnails{
     display: flex;
@@ -269,7 +321,9 @@
     gap: 2rem;
     padding: 1rem;
     align-items: center;
+    padding-bottom: 2rem;
   }
+
   .video-thumbnails a {
     display: block;
     width: 100%;
@@ -281,7 +335,8 @@
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, 
+    box-shadow 0.3s ease;
   }
 
   .video-thumbnails a:hover img {
@@ -294,18 +349,18 @@
   }
   /* Footer Section */
   footer {
-    background: #f7e4e6;
+    background: #f7e821;
     padding: 2rem 1rem;
     text-align: center;
     font-size: 0.9rem;
-    color: #b94f4a;
+    color: #cf1e14;
   }
   footer p {
     margin: 0 0 1rem;
     font-weight: 700;
   }
   footer .btn-secondary {
-    background-color: #b94f4a; color: #fff; border: none; border-radius: 9999px;
+    background-color: #65c4ff; color: #fff; border: none; border-radius: 9999px;
     padding: 0.75rem 2.5rem; font-weight: 700; font-size: 1rem; cursor: pointer;
     text-transform: uppercase; letter-spacing: 0.1em;
     transition: background-color 0.3s ease;
@@ -316,10 +371,16 @@
     background-color: #9c3f3b;
   }
   footer .social-icons-footer {
-    display: flex; justify-content: center; gap: 1rem; margin-top: 0.5rem;
+    display: flex; 
+    justify-content: center; 
+    gap: 1rem; 
+    margin-top: 0.5rem;
   }
   footer .social-icons-footer a {
-    width: 24px; height: 24px; fill: #b94f4a; opacity: 0.8;
+    width: 24px; 
+    height: 24px; 
+    fill: #b94f4a; 
+    opacity: 0.8;
     transition: opacity 0.3s ease;
   }
   footer .social-icons-footer a:hover {
@@ -382,16 +443,15 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
+      max-width: 80%;
+      margin: 0 auto;
     }
     .video-thumbnails a {
       flex: 1 1 240px;
     }
     .merch-grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 2fr);
       gap: 1rem;
-    }
-    .merch-item {
-      max-width: 140px;
     }
   }
 </style>
@@ -444,6 +504,7 @@
     <video autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;">
       <source src="./media-content/loop-video.mp4" type="video/mp4" />
     </video>
+    <h2 class="title">MY MOM IS HERE</h2>
     <div class="hero-buttons" id = "hero-buttons">
       <a href="tour.html" class="btn-primary" role="button">SHOWS</a>
       <a href="music.html" class="btn-primary" role="button">MUSIC</a>
