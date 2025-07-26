@@ -55,3 +55,106 @@ footer a svg {
     width: 2rem;
     height: 2rem;
 }
+/* Prevent body from scrolling when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Make modal scrollable if content is long */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  overflow-y: auto;
+  z-index: 2000;
+  padding: 2rem 1rem;
+  display: none; /* Default: hidden */
+}
+
+.modal.show {
+  display: block; 
+}
+.modal-content {
+  background: #fffbe6;
+  color: #2b2b2b;   
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 750px;
+  margin: 2rem auto; /* ensures it starts from top and is centered horizontally */
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 0 40px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  text-transform: none;
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+.modal-content label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.modal-content button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #F68A88;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-close {
+  position: absolute;
+  align-items: right;
+  top: -1rem;
+  right: 0.3rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: #2b2b2b;
+  cursor: pointer;
+  z-index: 9999; /* high z-index to make it sit on top */
+  width: auto;
+  height: auto
+}
+
+.modal-content select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  font-family: inherit;
+  color: #333;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D'16'%20height%3D'16'%20viewBox%3D'0%200%2024%2024'%20fill%3D'none'%20xmlns%3D'http://www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M7%209l5%205%205-5'%20stroke%3D'%239C3F3B'%20stroke-width%3D'2'%20stroke-linecap%3D'round'%20stroke-linejoin%3D'round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+.modal-content select:focus {
+  border-color: #f68a88;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(246, 138, 136, 0.25);
+}

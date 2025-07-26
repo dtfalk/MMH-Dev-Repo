@@ -16,7 +16,7 @@ async function loadFragment(id, filePath, callback) {
 
 document.addEventListener('DOMContentLoaded', () => {
   loadFragment('header-placeholder', '/global-html/header.html', initHeaderJS);
-  loadFragment('footer-placeholder', '/global-html/footer.html');
+  loadFragment('footer-placeholder', '/global-html/footer.html', initFooterJS);
 });
 
 function initHeaderJS() {
@@ -28,5 +28,28 @@ function initHeaderJS() {
       nav.classList.toggle('active');
     });
   }
+}
+
+function initFooterJS() {
+  const modal = document.getElementById('signup-modal');
+  const openBtn = document.getElementById('signup-btn');
+  const closeBtn = modal?.querySelector('.modal-close');
+
+  if (!modal || !openBtn || !closeBtn) return;
+
+  openBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.remove('hidden');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.add('hidden');
+    }
+  });
 }
 
