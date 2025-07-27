@@ -31,25 +31,27 @@ function updateHeader() {
   const currentPath = window.location.pathname;
 
   if (currentPath === '/' || currentPath.includes('index')) {
+    
     // Home page logic
-    const heroButtons = document.getElementById('hero-buttons');
-    if (!heroButtons) return;
+    const headerTitle = document.getElementById('header-title');
+if (!headerTitle) return;
 
-    const heroButtonsTop = heroButtons.getBoundingClientRect().top;
-    const paddingPx = window.innerHeight * 0.4;
-    const visibleButtonTop = heroButtonsTop + paddingPx;
+const headingTop = headerTitle.getBoundingClientRect().top;
+const paddingPx = window.innerHeight * 0.3;
+const visibleHeaderTop = headingTop + paddingPx;
 
-    const headerHeight = header.offsetHeight;
-    const triggerPoint = headerHeight + 20;
+const headerHeight = header.offsetHeight;
+const remInPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+const triggerPoint = headerHeight + 4 * remInPx;
 
-    if (visibleButtonTop <= triggerPoint) {
-      header.classList.add('solid');
-    } else {
-      header.classList.remove('solid');
-    }
+if (visibleHeaderTop <= triggerPoint) {
+  header.classList.add('solid');
+} else {
+  header.classList.remove('solid');
+}
+
 
   } else if (currentPath.includes('/about')) {
-    // Example logic for /about page
     const aboutHeader = document.getElementById('about-header');
     if (!aboutHeader) return;
     
@@ -87,44 +89,35 @@ function waitForHeaderAndRun() {
   const headerCheck = setInterval(() => {
     const header = document.querySelector('.site-header');
     const navLinks = document.querySelectorAll('.main-nav a');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const closeMenu = document.querySelector('.close-menu');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-    if (header) {
+    if (header && navLinks && menuToggle && closeMenu && mobileMenu) {
       clearInterval(headerCheck);
+
       updateHeader();
       setCurrentNavLink();
 
-      const isHome = window.location.pathname === '/' || window.location.pathname.includes('index');
       window.addEventListener('scroll', updateHeader);
       window.addEventListener('load', updateHeader);
-      
+
+      // Mobile menu toggle setup
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.add('open');
+        document.body.classList.add('modal-open');
+        
+      });
+
+      closeMenu.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        document.body.classList.remove('modal-open');
+        
+      });
     }
   }, 50);
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {waitForHeaderAndRun();});
-// document.addEventListener('DOMContentLoaded', () => {
-//   const normalizePath = (path) => {
-//     return path
-//       .toLowerCase()
-//       .replace(/^\/+/, '')           // remove leading slash
-//       .replace(/\/+$/, '')           // remove trailing slash
-//       .replace(/index\.html$/, '');  // treat index.html as root
-//   };
 
-//   const currentPath = normalizePath(window.location.pathname);
-
-//   const navLinks = document.querySelectorAll('.main-nav a');
-
-//   navLinks.forEach(link => {
-//     const href = link.getAttribute('href');
-//     if (!href || href.startsWith('http')) return;
-
-//     const linkPath = normalizePath(href);
-
-//     if (linkPath === currentPath) {
-//       link.setAttribute('aria-current', 'page');
-//     } else {
-//       link.removeAttribute('aria-current');
-//     }
-//   });
-// });

@@ -36,32 +36,12 @@ header {
     transition: background-color 0.3s ease;
 }
 
-.menu-toggle{
-    justify-content: flex-start;
-    justify-self: start;
-    display: block;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.4rem;
-    cursor: pointer;
-    z-index: 9999;
-}
-
-.main-nav{
-    display: none;
-    /* width: 100%; */
-}
-
 
 .main-nav {
-  width: 100%;
+  display: none;
   justify-self: start;
 }
 
-.main-nav.active{
-    display: block;
-}
 
 .menu{
     list-style: none;
@@ -95,6 +75,23 @@ header {
   font-weight: 700;
   border-bottom: 2px solid white; /* Underline current page only */
 }
+.menu-toggle {
+  
+  position: fixed;
+  top: 0.5rem;
+  right: 0rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  z-index: 2001;
+  display: block;
+  cursor: pointer;
+}
+body.modal-open .menu-toggle {
+  display: none;
+}
 
 .logo {
     position: relative; 
@@ -105,7 +102,7 @@ header {
 
 
 .social-icons {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: flex-end;
     gap: 0.75rem;
@@ -136,8 +133,8 @@ header {
 
 .logo img {
   max-height: 4rem !important;
-  height: 3rem !important;
-  width: 4rem !important;
+  height: 3.5rem !important;
+  width: 4.5rem !important;
   align-items: center;
   justify-content: center;
   display: block;
@@ -145,9 +142,21 @@ header {
   /* margin-left: -0.5rem; */
 }
 .logo-wrapper {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  grid-column: 2;
+  position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
-  /* margin-left: -10rem;  */
+  z-index: 2002;
+  width: 100%;
+}
+
+.logo-center-inner {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 header nav a.active,
@@ -155,22 +164,108 @@ header nav a[aria-current="page"] {
   border-bottom: 2px solid #fff;
   padding-bottom: 2px;
 }
+/* Fullscreen mobile menu (hidden by default) */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgb(125, 192, 207);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  /* padding: 1rem; */
+}
+
+.mobile-menu-overlay.open {
+  display: flex;
+}
+
+/* Close button */
+.close-menu {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Mobile nav links */
+.mobile-menu-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.mobile-menu-links li {
+  margin: 0.5rem 0;
+}
+
+.mobile-menu-links a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: solid;
+  /* text-decoration: none; */
+}
+
+/* Socials in mobile menu */
+.mobile-social-icons {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: auto;
+  padding-top: 1rem;
+}
+
+.mobile-social-icons .social-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-social-icons a,
+.mobile-social-icons a svg {
+  color: white;
+  fill: white;
+  width: 3rem;
+  height: 5rem;
+}
+
 @media (min-width: 1010px) {
-    
+    /* Show these social icons only on desktop */
+  .mobile-menu-overlay .mobile-social-icons {
+    display: none;
+  }
+
     .site-header {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
     }
-
+.site-header > .social-icons {
+    display: flex;
+  }
     .menu-toggle{
         display: none;
-        z-index: 9999;
     }
 
-    .main-nav{
-        display: block !important;
-    }
+    .main-nav {
+    display: block;
+  }
+  .main-nav.active{
+    display: block;
+}
 
     .menu{
         flex-direction: row;
@@ -193,4 +288,15 @@ header nav a[aria-current="page"] {
         display: block;
         margin-top: -1rem;
     }
+      .logo-wrapper {
+    position: static;
+    justify-content: center;
+      padding-top: 1rem;
+  padding-bottom: 0rem;
+  }
+
+  .logo-center-inner {
+    position: static;
+    transform: none;
+  }
 }
