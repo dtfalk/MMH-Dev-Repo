@@ -1,0 +1,108 @@
+/* Reset and base */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0; 
+    font-family: 'Poppins', sans-serif; 
+    color: white;
+    scroll-behavior: smooth; 
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+a {
+    color: inherit; text-decoration: none;
+}
+a:hover, a:focus {
+    text-decoration: underline;
+}
+h2 {
+    margin: 0 0 1rem 0; font-weight: 700; text-transform: uppercase;
+}
+p {
+    margin: 0 0 1rem 0;
+}
+/* Container */
+.container {
+    max-width: 1200px; margin: 0 auto; padding: 0 1rem;
+}
+/* Main content */
+main {
+    padding-top: 90px;
+    background: url('/media-content/videos-media/background.jpg') no-repeat center bottom;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding-bottom: 3rem;
+}
+main h2.section-title {
+    background: rgba(0,0,0,0.6);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 2rem;
+    text-align: center;
+    max-width: 100%;
+}
+main p.loading-note {
+    color: #eee;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+/* Video sections */
+section.videos-section {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(0,0,0,0.6);
+    padding: 1rem 1rem 2rem 1rem;
+    border-radius: 6px;
+}
+section.videos-section h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 1rem;
+}
+.videos-grid iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 4px;
+}
+.signup-btn {
+    display: inline-block;
+    background: #900;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 1rem 0 0.5rem 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.signup-btn:hover,
+.signup-btn:focus {
+    background: #b00;
+}
+/* Responsive adjustments */
+@media (max-width: 1010px) {
+    main {
+        padding: 90px 1rem 2rem 1rem;
+    }
+    section.videos-section {
+        max-width: 100%;
+        padding: 1rem 0.5rem 1.5rem 0.5rem;
+    }
+}

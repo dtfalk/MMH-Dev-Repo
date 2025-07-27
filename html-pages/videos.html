@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Title and importing the icon for the page (seen on the webpage's tab) -->
+    <title>My Mom is Here</title>
+    <link rel="icon" href="/media-content/logo.png" type="image/x-icon" />
+    <meta name="description" content="Videos for My Mom Is Here (The Band)" />
+
+    <!-- Importing the necessary CSS files -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/videos.css">
+  </head>
+  <body>
+
+    <!-- Placeholder header that will be populated with the HTML from "global-html/header.html" due to our fragment loader -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main section with all of the band's videos -->
+    <main>
+      <section class="videos-section" aria-labelledby="live-videos-title">
+
+        <!-- Header for the section -->
+        <center><strong><h2 id="live-videos-title">Music Videos</h2></strong></center>
+
+        <!-- iframe links to each video -->
+        <div class="videos-grid">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/UWZgF8JRni4?si=nyKhuR4ZPzCuHQrN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/l_4Wr4e9Tts?si=X8j2DH1gGlEOk_OB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/fenM8Hr4OIM?si=hCYs8mBlRujD97YF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/gBGYGVzh6sk?si=PGH2nmKXzgwQA0Va" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </section>
+    </main>
+
+    <!-- Placeholder footer that will be populated with the HTML from "global-html/footer.html" due to our fragment loader -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Importing relevant scripts for header and footer -->
+    <script src="/javascript/load-fragments.js"></script>
+    <script src="/javascript/header.js"></script>
+    <script src="/javascript/footer.js"></script>
+  </body>
+</html>

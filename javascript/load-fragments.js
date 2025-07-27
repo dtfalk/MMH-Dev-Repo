@@ -8,23 +8,18 @@ async function loadFragment(id, filePath, callback) {
     const html = await res.text();
     container.innerHTML = html;
 
-    if (typeof callback === "function") callback(); // Run JS setup AFTER loading
+    if (typeof callback === "function") callback();
   } catch (err) {
-    console.error(err);
+    console.error(`Error loading fragment "${filePath}":`, err);
   }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  loadFragment('header-placeholder', '/global-html/header.html', initHeaderJS);
-  loadFragment('footer-placeholder', '/global-html/footer.html', initFooterJS);
-});
 
 function initHeaderJS() {
   const toggleBtn = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.main-nav');
 
   if (toggleBtn && nav) {
-    toggleBtn.addEventListener('click', function () {
+    toggleBtn.addEventListener('click', () => {
       nav.classList.toggle('active');
     });
   }
@@ -53,3 +48,10 @@ function initFooterJS() {
   });
 }
 
+document.addEventListener('DOMContentLoaded', async () => {
+
+  // Then load header and footer in order
+  await loadFragment('header-placeholder', '/html-pages/header.html', initHeaderJS);
+  await loadFragment('footer-placeholder', '/html-pages/footer.html', initFooterJS);
+
+});

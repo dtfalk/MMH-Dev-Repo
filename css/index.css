@@ -1,0 +1,284 @@
+/* Reset and base */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0; 
+    font-family: 'Poppins', sans-serif; 
+    color: #000;
+    scroll-behavior: smooth; 
+    min-height: 100%;
+    background-image: url('/media-content/index-media/background-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.body-wrapper {
+    background: rgba(0,0,0,0.6);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem;
+}
+a {
+    color: inherit; text-decoration: none;
+}
+h2 {
+    margin: 0 0 1rem; 
+    font-weight: 700; 
+    font-size: xx-large;
+    text-align: center; 
+    text-transform: uppercase; 
+    color: white;
+    padding-top: 4rem;
+}
+
+strong {
+    font-weight: 700;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    margin: 0 auto; 
+    padding: 0 1rem;
+}
+
+nav a {
+    color: #fff; 
+    opacity: 0.8; 
+    transition: opacity 0.3s ease;
+}
+nav a:hover, nav a[aria-current="page"] {
+    opacity: 1;
+}
+
+/* Hero Section */
+.hero {
+    position: relative; 
+    height: 100vh;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+.hero video {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    z-index: 0;
+    object-position: center 0%;
+}
+.title {
+    z-index: 1;
+    padding-top: 20vh;
+}
+.hero-buttons {
+    position: relative; 
+    z-index: 1; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1.5rem; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    padding-top: 15vh;
+}
+.btn-primary {
+    background-color: #65c4ff; 
+    color: #fff; 
+    border: none; 
+    border-radius: 9999px;
+    padding: 0.75rem 2.5rem; 
+    font-weight: 700; 
+    font-size: 1rem; 
+    cursor: pointer;
+    text-transform: uppercase; 
+    letter-spacing: 0.1em;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #079cf9;
+}
+/* Upcoming Shows Section */
+.shows-section {
+    background: transparent;
+    padding: 0 1rem 1rem;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.shows-images {
+    display: flex; 
+    justify-content: center; 
+    gap: 2rem; 
+    flex-wrap: wrap; 
+    margin: 2rem 0 2rem;
+}
+.shows-images a {
+    flex: 1 1 280px;
+    max-width: 400px; 
+    background: #fff; 
+    padding: 0.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    border-radius: 4px;
+}
+.shows-images img {
+    width: 100%; height: auto; display: block;
+}
+/* Tickets Button */
+.tickets-btn {
+    margin: 1rem auto 0;
+}
+/* Merch Section */
+.merch-section {
+    position: relative;
+    background: transparent;
+    padding: 3rem 1rem 4rem;
+    color: #fff;
+    text-align: center;
+}
+.merch-section::before {
+    content: "";
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    z-index: 0;
+    height: 90%;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.merch-section >*{
+    position: relative;
+    z-index: 1;
+}
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,2fr);
+    gap: 1.5rem;
+    justify-items: center;
+    margin: 2rem 2rem 2rem;
+}
+.merch-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 2000px;
+}
+.merch-item img {
+    width: 100%; 
+    height: auto; 
+    display: block;
+}
+/* Shop Now Button */
+.shop-btn {
+    margin: 1rem auto 0;
+}
+/* Music Videos Section */
+.mv-section {
+    position: relative;
+    background: transparent;
+    padding: 0 1rem 1rem;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+}
+.mv-section > * {
+    position: relative; z-index: 1;
+}
+.video-thumbnails{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.video-thumbnails a {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+.video-thumbnails img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, 
+    box-shadow 0.3s ease;
+}
+
+.video-thumbnails a:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+/* Listen Button */
+.listen-btn {
+    margin: 1.5rem auto 0;
+}
+/* Responsive */
+@media (min-width: 1010px) {
+    .body-wrapper {
+        background: rgba(0,0,0,0.4);
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        font-size: 2rem;
+        text-align: center;
+        margin: 3.5rem;
+    }
+    .hero {
+        position: relative;
+        height: 65vh; /* or 500px — change as needed */
+        overflow: hidden;
+    }
+    .hero video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+    .hero-buttons {
+        flex-direction: row;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    .shows-images {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .mv-section {
+        padding: 4rem 1rem 4rem;
+    }
+    .video-thumbnails{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .video-thumbnails a {
+        flex: 1 1 240px;
+    }
+    .merch-grid {
+        grid-template-columns: repeat(3, 2fr);
+        gap: 1rem;
+    }
+    .merch-item {
+        max-width: 250px;
+    }
+}

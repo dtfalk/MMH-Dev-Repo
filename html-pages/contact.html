@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Title and importing the icon for the page (seen on the webpage's tab) -->
+    <title>ABOUT — My Mom is Here</title>
+    <link rel="icon" href="/media-content/logo.png" type="image/x-icon" />
+    <meta name="description" content="Contact My Mom is Here: Management. Booking. Email List." />
+
+    <!-- Importing our CSS and the icon for the page -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/contact.css">
+
+  </head>
+
+  <!-- Beginning of the content of the page (header + main content + footer) -->
+  <body>
+    <!-- Placeholder header that will be populated with the HTML from "global-html/header.html" due to our fragment loader -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main content with contact information -->
+    <main>
+      <br>
+      <br>
+      <br>
+      <!-- Contact info and newsletter signup -->
+      <section class="hero" aria-label="Contact and newsletter sign up">
+
+        <!-- Contact info -->
+        <div class="contact-info">
+          <h2>CONTACT</h2>
+          <p><strong>Keeping it all together:</strong>
+            <strong><a href="mailto:mymomisheretheband@gmail.com">Samantha Seiff | mymomisheretheband@gmail.com</a></strong>
+          </p>
+        </div>
+
+        <!-- Newsletter signup -->
+        <div class="newsletter" aria-label="Newsletter sign up">
+          <h2>KEEP IN TOUCH</h2>
+          <p>Join My Mom is Here's mailing list to receive updates on new music and shows.</p>
+          <form autocomplete="on" method="POST" action="#" onsubmit="return false;">
+            <input type="text" name="fname" placeholder="First Name" maxlength="30" spellcheck="false" aria-label="First Name" required />
+            <input type="email" name="email" placeholder="Email Address" maxlength="254" spellcheck="false" aria-label="Email Address" required />
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+  <!-- Placeholder footer that will be populated with the HTML from "global-html/footer.html" due to our fragment loader -->
+    <div id="footer-placeholder"></div>
+  
+  <!-- Importing the relevant scripts for the header and the footer  -->
+  <script src="/javascript/load-fragments.js"></script>
+  <script src="/javascript/header.js"></script>
+  <script src="/javascript/footer.js"></script>
+  <script>
+  </script>
+  </body>
+</html>

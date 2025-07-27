@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Title and importing the icon for the page (seen on the webpage's tab) -->
+    <title>ABOUT — My Mom is Here</title>
+    <link rel="icon" href="/media-content/logo.png" type="image/x-icon" />
+    <meta name="description" content="About My Mom Is Here (The Band)" />
+
+    <!-- Importing our CSS and the icon for the page -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/about.css">
+  </head>
+
+  <!-- Start of the page body (header, main section, footer) -->
+  <body>
+
+  <!-- Placeholder header that will be populated with the HTML from "global-html/header.html" due to our fragment loader -->
+  <div id="header-placeholder"></div>
+
+  <!-- Main section of the page (neither header nor footer) -->
+  <main id="page" role="main">
+
+    <!-- Section with band name, catchy quote about band, and band description -->
+    <section>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <!-- Line breaks for spacing and the content containing the band info -->
+      <div class="content-wrapper">
+
+        <!-- Header with band name -->
+        <h2 id = "about-header">My Mom Is Here</h2>
+
+        <!-- Single catchy quote about the band -->
+        <center>
+            <blockquote>
+                <b>"Not all audiences may know jazz, but few will resist such a pleasant singing voice, and music played so smoothly."</b>
+            </blockquote>
+        </center>
+        <br>
+        <br>
+        <br>
+
+        <!-- Description of the band -->
+        <p>
+          <strong>My Mom Is Here</strong> is a New York City-based band blending the soul of jazz with the accessibility of pop and the energy of classic rock. Formed by vocalist <strong>Samantha Seiff</strong> and pianist <strong>Nick Sare</strong>, the group features Columbia jazz alumni <strong>Aidan Speckhard</strong> (drums), <strong>Stephen Park</strong> (guitar), and <strong>Ryan Daar</strong> (bass).
+        </p>
+        <p>
+          The band debuted in June 2024 with <em>“Didn’t Sleep Tonight”</em>, a soulful, groove-forward track inspired by a chaotic night out. The song was largely written by Seiff during a 6 a.m. Uber ride and built around a catchy bass riff composed by Sare—who is also a founding member of <em>Melt the Band</em>.
+        </p>
+        <p>
+          Drawing on influences like Fleetwood Mac, The Rolling Stones, Stevie Wonder, and Tedeschi Trucks Band, <strong>My Mom Is Here</strong> creates music that’s rich in texture, bold in ambition, and always danceable. Their sound wraps the expansive freedom of jazz and neo-soul in a polished, modern package.
+        </p>
+        <p>
+          Their second single, <em>“Memory Jar,”</em> is set to release in August 2024.
+        </p>
+        <br>
+      </div>
+    </section>
+
+    <!-- Meet the band section -->
+    <section class="band-section" aria-label="Meet the band">
+
+      <!-- Header for this portion -->
+      <h2>MEET THE BAND</h2>
+
+      <!-- Beginning the "band-grid" with bandmember photos and names -->
+      <div class="band-grid">
+
+        <!-- Band member #1 -->
+        <div class="band-member">
+          <a href="https://www.instagram.com/sam.seiff/" target="_blank" rel="noopener">
+            <img src="/media-content/about-media/sam-seiff.jpg" alt="Sam Seiff" loading="lazy" />
+          </a>
+          <div class="band-member-name">Sam Seiff</div>
+          <div class="band-member-role">Lead Vocals</div>
+        </div>
+
+        <!-- Band member #2 -->
+        <div class="band-member">
+          <a href="https://www.instagram.com/nick_sare/#" target="_blank" rel="noopener">
+            <img src="/media-content/about-media/nick_sare.jpg" alt="Nick Sare" loading="lazy" />
+          </a>
+          <div class="band-member-name">Nick Sare</div>
+          <div class="band-member-role">Keys</div>
+        </div>
+
+        <!-- Band member #3 -->
+        <div class="band-member">
+          <a href="https://www.instagram.com/my.mom.is.here/" target="_blank" rel="noopener">
+            <img src="/media-content/about-media/stephen-park.jpg"  alt="Stephen Park" loading="lazy" />
+          </a>
+          <div class="band-member-name">Stephen Park</div>
+          <div class="band-member-role">Guitar</div>
+        </div>
+
+        <!-- Band member #4 -->
+        <div class="band-member">
+          <a href="https://www.instagram.com/my.mom.is.here/" target="_blank" rel="noopener">
+            <img src="media-content/about-media/aidan-speckhard.jpg" alt="Aidan Speckhard" loading="lazy" />
+          </a>
+          <div class="band-member-name">Aidan Speckhard</div>
+          <div class="band-member-role">Drums</div>
+        </div>
+
+        <!-- Band member #5 -->
+        <div class="band-member">
+          <a href="https://www.instagram.com/my.mom.is.here/" target="_blank" rel="noopener">
+            <img src="/media-content/about-media/ryan-daar.jpg" alt="Ryan Daar" loading="lazy" />
+          </a>
+          <div class="band-member-name">Ryan Daar</div>
+          <div class="band-member-role">Bass</div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Placeholder footer that will be populated with the HTML from "global-html/footer.html" due to our fragment loader -->
+  <div id="footer-placeholder"></div>
+
+  
+  <!-- Importing the scripts for loading in the header and footer -->
+  <script src="/javascript/load-fragments.js"></script>
+  <script src="/javascript/header.js"></script>
+  <script src="/javascript/footer.js"></script>
+  </body>
+</html>

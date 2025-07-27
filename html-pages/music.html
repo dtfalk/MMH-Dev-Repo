@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Title and importing the icon for the page (seen on the webpage's tab) -->
+    <title>My Mom is Here</title>
+    <link rel="icon" href="/media-content/logo.png" type="image/x-icon" />
+    <meta name="description" content="Music for My Mom Is Here (The Band)" />
+
+    <!-- Importing our CSS and the icon for the page -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/music.css">
+
+  </head>
+  <body>
+
+    <!-- Placeholder header that will be populated with the HTML from "global-html/header.html" due to our fragment loader -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main section with music platforms, spotify previews, etc -->
+    <main>
+
+      <!-- Section with links/icons for the band's various music platforms -->
+      <section class="platforms" aria-label="Music platforms">
+        <a href="https://open.spotify.com/artist/3f9p52DC2u7WN61lNNc18D" target="_blank" rel="noopener" aria-label="Spotify">
+          <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/a582278a-0336-4f48-b804-9df44a070211/Spotify_Logo_RGB_White.png" alt="Spotify logo" loading="lazy" decoding="async" />
+        </a>
+        <a href="https://music.apple.com/us/artist/my-mom-is-here/1748184457" target="_blank" rel="noopener" aria-label="Apple Music">
+          <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/64a11ba9-49df-49d0-ae8c-8418322fec31/Apple-Music-Logo_CROPPED.png" alt="Apple Music logo" loading="lazy" decoding="async" />
+        </a>
+        <a href="https://music.youtube.com/channel/UCQDilxdbmlhAOYe_NfvgTow" target="_blank" rel="noopener" aria-label="YouTube Music">
+          <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/270389c7-f552-48fc-b888-e8febe06979e/Youtube-Music-Logo-1.png" alt="YouTube Music logo" loading="lazy" decoding="async" />
+        </a>
+        <a href="https://www.amazon.com/music/player/artists/B0D55SYCYC/my-mom-is-here" target="_blank" rel="noopener" aria-label="Amazon Music">
+          <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/60d996c2-903f-45dd-a83b-0f1de373fca4/AmazonMusicLogo-1.png" alt="Amazon Music logo" loading="lazy" decoding="async" />
+        </a>
+        <a href="https://www.deezer.com/en/artist/267180682/biography" target="_blank" rel="noopener" aria-label="Deezer">
+          <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/a89b1c26-3552-4cad-a878-4676c1b0563d/DeezerMusicIcon_WIDE-1.png" alt="Deezer logo" loading="lazy" decoding="async" />
+        </a>
+        <a href="https://tidal.com/browse/artist/48022361" target="_blank" rel="noopener" aria-label="Tidal">
+          <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/48f1c8f1-16e7-4455-8f97-da3110413644/TidalIcon_WIDE+%281%29.png" alt="Tidal logo" loading="lazy" decoding="async" />
+        </a>
+      </section>
+
+      <!-- Section for the Spotify song previews -->
+      <h3>STUDIO RELEASES</h3>
+      <section class="spotify-embeds" aria-label="Studio releases Spotify embeds">
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/15j0lU4L9KfYkpLJMLu13a?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/70al7FyjDdYLd1ysSJ9b73?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4JNflLn59Bp5ecVQ7GApRv?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5e13gmcTSdgP0wXkPV6DCi?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </section>
+    </main>
+
+    <!-- Placeholder footer that will be populated with the HTML from "global-html/footer.html" due to our fragment loader -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Importing the relevant scripts for the header and the footer -->
+    <script src="/javascript/load-fragments.js"></script>
+    <script src="/javascript/header.js"></script>
+    <script src="/javascript/footer.js"></script>
+    </body>
+</html>

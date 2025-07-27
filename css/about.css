@@ -1,0 +1,111 @@
+* {
+      box-sizing: border-box;
+  }
+  body {
+      margin: 0; 
+      font-family: 'Poppins', sans-serif; 
+      color: white;
+      scroll-behavior: smooth; 
+      min-height: 100%;
+      background-image: url('/media-content/about-media/background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+  }
+  a {
+      color: #F68A88;
+      text-decoration: none;
+  }
+  a:hover,
+  a:focus {
+      text-decoration: underline;
+  }
+  main {
+      background: rgba(0,0,0,0.2);
+      padding: 4rem 2rem 3rem;
+  }
+  main h2 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+  }
+  main p {
+      max-width: 720px;
+      margin: 0 auto 1.25rem;
+      line-height: 1.6;
+      font-weight: 400;
+  }
+  main p strong {
+      font-weight: 700;
+  }
+  main p a {
+      font-weight: 700;
+      color: #F68A88;
+  }
+  main p a:hover,
+  main p a:focus {
+      text-decoration: underline;
+  }
+  .band-section {
+      margin-top: 3rem;
+  }
+  .band-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+      gap: 2rem;
+      justify-items: center;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem ;
+  }
+  .band-member {
+      text-align: center;
+  }
+  .band-member img {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      background: #22222299;
+  }
+  .band-member-name {
+      margin-top: 0.75rem;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #fff;
+  }
+  .band-member-role {
+      font-style: italic;
+      font-weight: 400;
+      color: #ccc;
+      font-size: 0.9rem;
+  }
+  .content-wrapper {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem 1rem;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  }
+  @media (max-width: 1010px) {
+    body {
+        background-image: url('/media-content/about-media/background-mobile.jpg');
+    }
+    main {
+        margin: 1rem 1rem 3rem;
+        padding: 1.5rem 1.5rem 2rem;
+    }
+    .band-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .band-member img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+  }
