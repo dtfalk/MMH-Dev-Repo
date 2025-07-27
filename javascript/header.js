@@ -1,10 +1,12 @@
+// Highlights the current navigation link in the menu
 function setCurrentNavLink() {
+  // Normalizes a URL path (removes slashes and converts to lowercase)
   const normalizePath = (path) => {
     return path
       .toLowerCase()
-      .replace(/^\/+/, '')
-      .replace(/\/+$/, '')
-      .replace(/index\.html$/, '');
+      .replace(/^\/+/, '')        // Remove leading slashes
+      .replace(/\/+$/, '')        // Remove trailing slashes
+      .replace(/index\.html$/, ''); // Remove 'index.html' if present
   };
 
   const currentPath = normalizePath(window.location.pathname);
@@ -12,10 +14,11 @@ function setCurrentNavLink() {
 
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
-    if (!href || href.startsWith('http')) return;
+    if (!href || href.startsWith('http')) return; // Skip external links
 
     const linkPath = normalizePath(href);
 
+    // Add aria-current to active link for accessibility
     if (linkPath === currentPath) {
       link.setAttribute('aria-current', 'page');
       console.log(`Set active nav: ${link.textContent}`);
@@ -24,6 +27,8 @@ function setCurrentNavLink() {
     }
   });
 }
+
+// Updates the header appearance based on scroll and current page
 function updateHeader() {
   const header = document.querySelector('.site-header');
   if (!header) return;
@@ -31,33 +36,35 @@ function updateHeader() {
   const currentPath = window.location.pathname;
 
   if (currentPath === '/' || currentPath.includes('index')) {
-    
-    // Home page logic
+    // Logic for homepage header behavior
     const headerTitle = document.getElementById('header-title');
-if (!headerTitle) return;
+    if (!headerTitle) return;
 
-const headingTop = headerTitle.getBoundingClientRect().top;
-const paddingPx = window.innerHeight * 0.3;
-const visibleHeaderTop = headingTop + paddingPx;
+    // Calculate how far from the top the title is + a padding offset
+    const headingTop = headerTitle.getBoundingClientRect().top;
+    const paddingPx = window.innerHeight * 0.3;
+    const visibleHeaderTop = headingTop + paddingPx;
 
-const headerHeight = header.offsetHeight;
-const remInPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
-const triggerPoint = headerHeight + 4 * remInPx;
+    // Determine the scroll threshold to make the header solid
+    const headerHeight = header.offsetHeight;
+    const remInPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const triggerPoint = headerHeight + 4 * remInPx;
 
-if (visibleHeaderTop <= triggerPoint) {
-  header.classList.add('solid');
-} else {
-  header.classList.remove('solid');
-}
-
+    // Add or remove 'solid' class based on scroll position
+    if (visibleHeaderTop <= triggerPoint) {
+      header.classList.add('solid');
+    } else {
+      header.classList.remove('solid');
+    }
 
   } else if (currentPath.includes('/about')) {
+    // Logic for the /about page
     const aboutHeader = document.getElementById('about-header');
     if (!aboutHeader) return;
-    
+
     const headingTop = aboutHeader.getBoundingClientRect().top;
     const remInPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
-    const triggerPoint = aboutHeader.offsetHeight + 3 * remInPx; // adjust this for when you want the header to turn solid
+    const triggerPoint = aboutHeader.offsetHeight + 3 * remInPx;
 
     if (headingTop < triggerPoint) {
       header.classList.add('solid');
@@ -66,11 +73,12 @@ if (visibleHeaderTop <= triggerPoint) {
     }
 
   } else if (currentPath.includes('tour')) {
+    // Logic for the /tour page
     const tourHeading = document.getElementById('upcoming-shows-title');
     if (!tourHeading) return;
 
     const headingTop = tourHeading.getBoundingClientRect().top;
-    const triggerPoint = 60; // adjust this for when you want the header to turn solid
+    const triggerPoint = 60;
 
     if (headingTop < triggerPoint) {
       header.classList.add('solid');
@@ -79,12 +87,12 @@ if (visibleHeaderTop <= triggerPoint) {
     }
 
   } else {
-    // Default: solid header always
+    // Default behavior for all other pages: always solid
     header.classList.add('solid');
   }
 }
 
-
+// Waits until all necessary elements exist, then runs logic
 function waitForHeaderAndRun() {
   const headerCheck = setInterval(() => {
     const header = document.querySelector('.site-header');
@@ -93,31 +101,34 @@ function waitForHeaderAndRun() {
     const closeMenu = document.querySelector('.close-menu');
     const mobileMenu = document.getElementById('mobileMenu');
 
+    // Only run setup once all critical elements are present
     if (header && navLinks && menuToggle && closeMenu && mobileMenu) {
       clearInterval(headerCheck);
 
+      // Initialize header state and nav link highlighting
       updateHeader();
       setCurrentNavLink();
 
+      // Recheck header state on scroll and load
       window.addEventListener('scroll', updateHeader);
       window.addEventListener('load', updateHeader);
 
-      // Mobile menu toggle setup
+      // Open mobile menu
       menuToggle.addEventListener('click', () => {
         mobileMenu.classList.add('open');
         document.body.classList.add('modal-open');
-        
       });
 
+      // Close mobile menu
       closeMenu.addEventListener('click', () => {
         mobileMenu.classList.remove('open');
         document.body.classList.remove('modal-open');
-        
       });
     }
-  }, 50);
+  }, 50); // Check every 50ms until elements are ready
 }
 
-
-document.addEventListener('DOMContentLoaded', () => {waitForHeaderAndRun();});
-
+// Run initialization after the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+  waitForHeaderAndRun();
+});

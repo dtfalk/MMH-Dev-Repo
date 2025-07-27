@@ -71,11 +71,11 @@
         <div class="hero-buttons" id="hero-buttons">
           <a href="/html-pages/tour.html" class="btn-primary" role="button">SHOWS</a>
           <a href="/html-pages/music.html" class="btn-primary" role="button">MUSIC</a>
-          <a href="/html-pages/merch.html" class="btn-primary" role="button" target="_blank" rel="noopener">MERCH</a>
+          <a href="/html-pages/merch.html" class="btn-primary" role="button">MERCH</a>
         </div>
       </section>
 
-      <!-- Body with merche, songs, tour poster, etc... -->
+      <!-- Body with merch, songs, tour poster, etc... -->
       <div class="body-wrapper">
         <div class="background"></div>
 
@@ -87,7 +87,7 @@
           
           <!-- Tour poster -->
           <div class="shows-images">
-            <a href="/html-pages/tour.html" aria-label="View all upcoming show tickets">
+            <a class="expandable-tour-poster" aria-label="View all upcoming show tickets">
               <img src="/media-content/index-media/tour-poster.jpg" alt="Upcoming shows poster"/>
             </a>
           </div>
@@ -127,31 +127,36 @@
 
           <!-- Grid of images of the band's merch -->
           <div class="merch-grid">
-            <a href="/html-pages/merch.html" class="merch-item" target="_blank" rel="noopener" aria-label="Blue T-shirt">
+            <a class="merch-item" aria-label="Blue T-shirt">
               <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/055ba33b-e6df-45b6-b61d-8ab94f0e445f/Couch+Live+Flo+Blue+T-Shirt+%28Lighter+Pink+Back%29.png" alt="Blue T-shirt" loading="lazy" decoding="async" />
             </a>
-            <a href="/html-pages/merch.html" class="merch-item" target="_blank" rel="noopener" aria-label="Black Sweatshirt">
+            <a class="merch-item" aria-label="Black Sweatshirt">
               <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/cfc345dd-bb2c-48a7-a8f9-0b6fdddca693/Blue+Hoodie+%28Lighter+Pink+Back%29.png" alt="Black Sweatshirt" loading="lazy" decoding="async" />
             </a>
-            <a href="/html-pages/merch.html" class="merch-item" target="_blank" rel="noopener" aria-label="Blue Hoodie">
+            <a class="merch-item" aria-label="Blue Hoodie">
               <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/1e410b4c-7cef-499d-ac08-042506ffebe5/Couch+Live+Ivory+T-Shirt+%28Lighter+Pink+Back%29.png" alt="Blue Hoodie" loading="lazy" decoding="async" />
             </a>
-            <a href="/html-pages/merch.html" class="merch-item" target="_blank" rel="noopener" aria-label="Maroon Hat">
+            <a class="merch-item" aria-label="Maroon Hat">
               <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/845e37b7-0d36-4b35-9a02-6bae010e16af/Maroon+Hat+%28Lighter+Pink+Back%29.png" alt="Maroon Hat" loading="lazy" decoding="async" />
             </a>
-            <a href="/html-pages/merch.html" class="merch-item" target="_blank" rel="noopener" aria-label="White T-shirt">
+            <a class="merch-item" aria-label="White T-shirt">
               <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/055ba33b-e6df-45b6-b61d-8ab94f0e445f/Couch+Live+Flo+Blue+T-Shirt+%28Lighter+Pink+Back%29.png" alt="White T-shirt" loading="lazy" decoding="async" />
             </a>
-            <a href="/html-pages/merch.html" class="merch-item" target="_blank" rel="noopener" aria-label="Couch Sticker">
+            <a class="merch-item" aria-label="Couch Sticker">
               <img src="https://images.squarespace-cdn.com/content/v1/63cb777a28ce4e12435b075a/3b408547-5c35-4322-8f02-3fe6a4c114f3/Couch+on+a+Couch+Sticker+%28Lighter+Pink+Back%29.png" alt="Couch Sticker" loading="lazy" decoding="async" />
             </a>
           </div>
 
           <!-- Button to redirect to the merch page -->
-          <a href="/html-pages/merch.html" class="btn-primary shop-btn" role="button" target="_blank" rel="noopener">SHOP NOW</a>
+          <a href="/html-pages/merch.html" class="btn-primary shop-btn" role="button">SHOP NOW</a>
         </section>
         </div>
     </main>
+
+    <!-- Modal for image preview -->
+    <div id="image-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:1000;">
+      <img id="modal-img" src="" alt="Expanded merch" style="max-width:90%; max-height:90%; border-radius:10px;" />
+    </div>
 
     <!-- Placeholder footer that will be populated with the HTML from "global-html/footer.html" due to our fragment loader -->
     <div id="footer-placeholder"></div>

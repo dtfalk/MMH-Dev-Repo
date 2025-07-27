@@ -90,7 +90,7 @@ main {
     border-radius: 0;
 }
 .newsletter button {
-    background: #000;
+    background: #65c4ff;
     color: #fff;
     font-weight: 700;
     font-size: 1.1rem;
@@ -102,7 +102,7 @@ main {
 }
 .newsletter button:hover,
 .newsletter button:focus {
-    background: #444;
+    background: #028fe7;
 }
 
 @media (max-width: 1010px) {
