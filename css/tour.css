@@ -61,7 +61,8 @@ section {
 }
 .shows-list {
     list-style: none;
-    margin: 0; padding: 0;
+    margin: 0; 
+    padding: 0;
 }
 .show-item {
     display: grid;
@@ -182,11 +183,14 @@ details p {
 
 /* Responsive */
 @media (max-width: 1010px) {
+    main {
+        padding-top: 1rem;
+    }
     .upcoming-shows {
         background: rgba(0,0,0,0.75);
         max-width: 900px;
-        margin: 0 auto 4rem;
-        padding: 2rem 2rem 3rem;
+        margin: 0 auto 0;
+        padding: 2rem 4rem 4rem;
         border-radius: 4px;
     }
     .show-item {

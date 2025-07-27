@@ -11,10 +11,10 @@ body {
     background-image: url('/media-content/index-media/background-image.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
 }
 .body-wrapper {
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.7);
     padding: 0.5rem 1rem;
     border-radius: 4px;
     font-size: 2rem;
@@ -109,7 +109,7 @@ nav a:hover, nav a[aria-current="page"] {
 /* Upcoming Shows Section */
 .shows-section {
     background: transparent;
-    padding: 0 1rem 1rem;
+    padding: 0 1rem 3rem;
     text-align: center;
     color: #fff;
     position: relative;
@@ -146,7 +146,7 @@ nav a:hover, nav a[aria-current="page"] {
     color: #fff;
     text-align: center;
 }
-.merch-section::before {
+/* .merch-section::before {
     content: "";
     position: absolute;
     background: rgba(0,0,0,0.5);
@@ -155,7 +155,7 @@ nav a:hover, nav a[aria-current="page"] {
     width: 90%;
     left: 50%;
     transform: translateX(-50%);
-}
+} */
 .merch-section >*{
     position: relative;
     z-index: 1;
@@ -231,7 +231,7 @@ nav a:hover, nav a[aria-current="page"] {
 /* Responsive */
 @media (min-width: 1010px) {
     .body-wrapper {
-        background: rgba(0,0,0,0.4);
+        background: rgba(0, 0, 0, 0.6);
         padding: 0.5rem 1rem;
         border-radius: 4px;
         font-size: 2rem;
@@ -257,9 +257,13 @@ nav a:hover, nav a[aria-current="page"] {
         gap: 1rem;
         align-items: flex-start;
     }
+
     .shows-images {
         flex-direction: row;
         gap: 1rem;
+    }
+    .shows-images a {
+    max-width: 550px; 
     }
     .mv-section {
         padding: 4rem 1rem 4rem;
@@ -268,11 +272,11 @@ nav a:hover, nav a[aria-current="page"] {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        max-width: 80%;
+        max-width: 90%;
         margin: 0 auto;
     }
     .video-thumbnails a {
-        flex: 1 1 240px;
+        flex: 1 1 300px;
     }
     .merch-grid {
         grid-template-columns: repeat(3, 2fr);

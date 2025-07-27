@@ -109,7 +109,7 @@ main {
     .hero {
         grid-template-columns: 1fr;
         min-height: auto;
-        padding-bottom: 2rem;
+        padding-bottom: 4rem;
     }
     .contact-info,
     .newsletter {
